@@ -11,7 +11,7 @@ const AboutSection = () => {
     }
 
     return (
-        <div className='container mx-auto mt-40 mb-80'>
+        <div className='container mx-auto mt-40'>
             <div ref={divRef} className="flex flex-row items-center">
                 <div className={`flex-shrink-0 ${hasBeenViewed ? 'fade-in-left' : 'opacity-0'}`}>
                     <img
