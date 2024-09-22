@@ -13,10 +13,7 @@ const HeroSection = () => {
     }, []);
 
     return (
-        <div 
-            className='mt-10 bg-cover bg-center bg-no-repeat h-screen'
-            style={{ backgroundImage: `url(${backgroundImage})` }}
-        >
+        <div className='mt-10'>
             <div className='container mx-auto'>
                 <div className={`flex flex-row justify-between items-center transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     <div className={`space-y-16 mb-10 flex-1`}>
@@ -26,10 +23,10 @@ const HeroSection = () => {
                         </div>
                         <p className='text-white tracking-wider text-xl'>I specialize in building fast, scale-able websites and <br /> web apps using the <span className='relative font-bold tracking-wider bg-gradient-to-r from-mainOrange to-blue-400 bg-clip-text text-transparent hover:cursor-pointer'>MERN<span className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-mainOrange to-blue-400"></span></span> stack.</p>
                         <div className='flex flex-row space-x-2'>
-                            <button className='font-ropa text-xl text-white px-3 py-2 border border-mainOrange rounded-md hover:bg-mainOrange transition duration-100'>
+                            <button className='font-ropa text-xl text-white px-3 py-2 border border-mainOrangeDark rounded-md hover:bg-mainOrangeDark transition duration-100'>
                                 View Work
                             </button>
-                            <button className='font-ropa text-xl text-white px-3 py-2 border border-mainOrange rounded-md bg-mainOrangeDark hover:bg-mainOrange transition duration-100'>
+                            <button className='font-ropa text-xl text-white px-3 py-2 border border-mainOrangeDark rounded-md bg-mainOrangeDark hover:bg-mainOrange transition duration-100'>
                                 Contact Me
                             </button>
                         </div>
