@@ -82,8 +82,8 @@ const SkillsSection = () => {
     ];
 
     return (
-        <div className="bg-darkGrayBackground">
-            <div className='container mx-auto mt-20 pt-10 mb-60'>
+        <div className="bg-darkGrayBackground" id='skills'>
+            <div className='container mx-auto mt-20 py-10'>
                 <div ref={divRef} className={`flex flex-col justify-center items-center ${hasBeenViewed ? 'fade-in-bottom' : ''}`}>
                     <p className='font-ropa text-white tracking-wider text-xl'>-My Tech Stack</p>
                     <h1 className='mt-4 text-mainOrange text-5xl font-roboto font-bold tracking-wider'>What can I do best?</h1>
