@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import pic from '../assets/img/hero-pic.jpg'
-import backgroundImage from '../assets/img/hero-background.png'
 
 const HeroSection = () => {
     const [isVisible, setIsVisible] = useState(false);
