@@ -5,7 +5,3 @@
 body {
     background-color: #31343E;
 }
-
-.transition-opacity {
-    transition: opacity 2s ease, transform 2s ease;
-}
