@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         mainGray: '#31343E',
-        mainOrange: '#F95353'
+        mainOrange: '#F95353',
+        mainOrangeDark: '#DE4A4A',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
