@@ -13,7 +13,7 @@ const SkillBar = ({ level }) => {
 
     return (
         <div className='mt-3'>
-            <p className="font-ropa text-white tracking-wider text-md mb-1">Skill:</p>
+            <p className="font-ropa text-white tracking-wider mb-1">Skill:</p>
             <div className='skill-bar-container'>
                 <div ref={divRef} className="skill-bar-fill" style={{ width: `${visibleLevel}%` }}></div>
             </div>

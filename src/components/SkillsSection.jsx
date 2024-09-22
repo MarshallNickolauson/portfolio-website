@@ -97,14 +97,14 @@ const SkillsSection = () => {
                             <div
                                 key={index}
                                 onClick={() => openInNewTab(tool.url)}
-                                className="bg-mainGrayDark px-4 py-3 rounded-lg white-shadow hover:cursor-pointer w-10/12 mb-4"
+                                className="bg-mainGrayDark px-4 py-3 rounded-xl white-shadow hover:cursor-pointer w-10/12 mb-4"
                             >
                                 <div className="flex flex-row items-center">
                                     {tool.icon}
                                     <p className="font-ropa text-white tracking-wider text-xl ml-2">{tool.title}</p>
                                 </div>
                                 <SkillBar level={tool.skill} />
-                                <p className='font-ropa text-gray-300 tracking-wider text-md'>{tool.description}</p>
+                                <p className='font-ropa text-gray-200 tracking-wider text-md'>{tool.description}</p>
                             </div>
                         ))}
 
@@ -116,14 +116,14 @@ const SkillsSection = () => {
                             <div
                                 key={index}
                                 onClick={() => openInNewTab(tool.url)}
-                                className="bg-mainGrayDark px-4 py-3 rounded-lg white-shadow hover:cursor-pointer w-10/12 mb-4"
+                                className="bg-mainGrayDark px-4 py-3 rounded-xl white-shadow hover:cursor-pointer w-10/12 mb-4"
                             >
                                 <div className="flex flex-row items-center">
                                     {tool.icon}
                                     <p className="font-ropa text-white tracking-wider text-xl ml-2">{tool.title}</p>
                                 </div>
                                 <SkillBar level={tool.skill} />
-                                <p className='font-ropa text-gray-300 tracking-wider text-md'>{tool.description}</p>
+                                <p className='font-ropa text-gray-200 tracking-wider text-md'>{tool.description}</p>
                             </div>
                         ))}
 
