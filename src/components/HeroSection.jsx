@@ -34,7 +34,7 @@ const HeroSection = () => {
                         <img 
                         src={pic} 
                         alt="Marshall"
-                        className='w-8/12 max-w-full object-contain mx-auto rounded-lg float-left'
+                        className='w-8/12 max-w-full object-contain mx-auto rounded-lg float-left shadow-md shadow-white'
                         />
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import HeroSection from "./components/HeroSection"
 import Navbar from "./components/Navbar"
 import backgroundImage from './assets/img/hero-background.png'
+import AboutSection from "./components/AboutSection"
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     >
       <Navbar />
       <HeroSection />
+      <AboutSection />
     </div>
   )
 }
