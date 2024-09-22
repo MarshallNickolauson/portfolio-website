@@ -6,8 +6,16 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    background-color: #31343E;
+    background: linear-gradient(to bottom, #1A1C23, #31343E);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 @keyframes fadeInLeft {

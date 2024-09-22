@@ -11,8 +11,8 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div>
-            <nav className={`container mx-auto py-2 mt-2 transition-all duration-1000 transform ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div className='mt-3'>
+            <nav className={`container mx-auto py-2 transition-all duration-1000 transform ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                 <div className='flex flex-row justify-between'>
                     <h1 className='font-roboto font-bold text-3xl text-mainOrange'>{"<MDN />"}</h1>
                     <div className='space-x-10'>

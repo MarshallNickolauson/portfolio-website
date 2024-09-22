@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import pic from '../assets/img/hero-pic.jpg'
+import particlesImg from '../assets/img/hero-background.png'
 
 const HeroSection = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -12,8 +13,8 @@ const HeroSection = () => {
     }, []);
 
     return (
-        <div className='mt-10'>
-            <div className='container mx-auto'>
+        <div>
+            <div className='container mx-auto mt-10'>
                 <div className={`flex flex-row justify-between items-center transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     <div className={`space-y-16 mb-10 flex-1`}>
                         <div>
