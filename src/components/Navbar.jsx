@@ -16,8 +16,8 @@ const Navbar = () => {
     const closeMenu = () => {
         setMenuOpen(false);
         hamburgerIconRef.current.classList.remove('open');
-        mobileMenu.current.classList.remove('translate-y-0', 'opacity-100');
-        mobileMenu.current.classList.add('-translate-y-full', 'opacity-0');
+        mobileMenu.current.classList.remove('opacity-100', 'hidden');
+        mobileMenu.current.classList.add('hidden', 'opacity-0');
     }
 
     useEffect(() => {
@@ -46,12 +46,12 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
         if (!menuOpen) {
             hamburgerIconRef.current.classList.add('open');
-            mobileMenu.current.classList.remove('translate-y-full', 'opacity-0', 'hidden');
-            mobileMenu.current.classList.add('translate-y-0', 'opacity-100');
+            mobileMenu.current.classList.remove('opacity-0', 'hidden');
+            mobileMenu.current.classList.add('opacity-100');
         } else {
             hamburgerIconRef.current.classList.remove('open');
-            mobileMenu.current.classList.remove('translate-y-0', 'opacity-100');
-            mobileMenu.current.classList.add('translate-y-full', 'opacity-0', 'hidden');
+            mobileMenu.current.classList.remove('opacity-100');
+            mobileMenu.current.classList.add('opacity-0', 'hidden');
         }
     };
 
@@ -85,7 +85,7 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div
                 ref={mobileMenu}
-                className={`fixed top-20 left-0 w-full py-6 bg-darkGrayBackground text-white flex flex-col justify-center items-center transform transition-all duration-500 ease-in-out ${menuOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}`}
+                className={`fixed top-20 left-0 w-full py-6 bg-darkGrayBackground text-white flex flex-col justify-center items-center transform transition-all duration-500 ease-in-out ${menuOpen ? 'opacity-100' : 'hidden opacity-0'}`}
             >
                 <a href='#skills' className='font-ropa text-white text-2xl mb-6 hover:underline' onClick={toggleHamburgerIcon}>Skills</a>
                 <a href='#projects' className='font-ropa text-white text-2xl mb-6 hover:underline' onClick={toggleHamburgerIcon}>Projects</a>

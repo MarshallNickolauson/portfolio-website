@@ -42,7 +42,7 @@ const HeroSection = () => {
                         <img 
                         src={pic} 
                         alt="Marshall"
-                        className='w-8/12 max-w-full object-contain mx-auto rounded-lg justify-center md:float-left white-shadow'
+                        className='w-8/12 max-w-full object-contain mx-auto rounded-lg justify-center md:float-left white-shadow hover:cursor-pointer'
                         />
                     </div>
                 </div>

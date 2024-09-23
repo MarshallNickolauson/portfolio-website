@@ -82,41 +82,42 @@ const SkillsSection = () => {
     ];
 
     return (
-        <div className="bg-darkGrayBackground" id='skills'>
-            <div className='container mx-auto mt-20 py-10'>
+        <div id='skills'>
+            <div className='container mx-auto mt-10 md:mt-20 py-10'>
                 <div ref={divRef} className={`flex flex-col justify-center items-center ${hasBeenViewed ? 'fade-in-bottom' : ''}`}>
                     <p className='font-ropa text-white tracking-wider text-xl'>-My Tech Stack</p>
                     <h1 className='mt-4 text-mainOrange text-5xl font-roboto font-bold tracking-wider'>What can I do best?</h1>
                     <span className="mt-6 block w-[180px] h-[2px] bg-mainOrange"></span>
                 </div>
-                <div className="flex flex-row justify-between mt-10">
-                    <div className="flex flex-col items-center w-1/2">
+                <div className="flex flex-col md:flex-row justify-between mt-10">
+                    <div className="flex flex-col items-center mx-auto md:mx-0 w-full">
                         <p className={`font-ropa text-white tracking-wider text-2xl mb-8 ${hasBeenViewed ? 'fade-in-bottom-slow' : ''}`}>Frontend</p>
 
                         {frontendTools.map((tool, index) => (
                             <div
                                 key={index}
                                 onClick={() => openInNewTab(tool.url)}
-                                className="bg-mainGrayDark px-4 py-3 rounded-xl white-shadow hover:cursor-pointer w-10/12 mb-4"
+                                className="bg-mainGrayDark px-4 py-3 rounded-xl white-shadow hover:cursor-pointer w-11/12 md:w-10/12 mb-4"
                             >
                                 <div className="flex flex-row items-center">
                                     {tool.icon}
                                     <p className="font-ropa text-white tracking-wider text-xl ml-2">{tool.title}</p>
                                 </div>
                                 <SkillBar level={tool.skill} />
-                                <p className='font-ropa text-gray-200 tracking-wider text-md'>{tool.description}</p>
+                                <p className='font-ropa text-gray-200 tracking-wider text-md
+                                '>{tool.description}</p>
                             </div>
                         ))}
 
                     </div>
-                    <div className="flex flex-col items-center w-1/2">
-                        <p className={`font-ropa text-white tracking-wider text-2xl mb-8 ${hasBeenViewed ? 'fade-in-bottom-slow' : ''}`}>Backend</p>
+                    <div className="flex flex-col items-center mx-auto md:mx-0 w-full">
+                        <p className={`font-ropa text-white tracking-wider text-2xl mt-4 md:mt-0 mb-8 ${hasBeenViewed ? 'fade-in-bottom-slow' : ''}`}>Backend</p>
 
                         {backendTools.map((tool, index) => (
                             <div
                                 key={index}
                                 onClick={() => openInNewTab(tool.url)}
-                                className="bg-mainGrayDark px-4 py-3 rounded-xl white-shadow hover:cursor-pointer w-10/12 mb-4"
+                                className="bg-mainGrayDark px-4 py-3 rounded-xl white-shadow hover:cursor-pointer w-11/12 md:w-10/12 mb-4"
                             >
                                 <div className="flex flex-row items-center">
                                     {tool.icon}
