@@ -84,11 +84,14 @@ body {
 
 .white-shadow {
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.35);
+    transform: translateY(0);
     transition: box-shadow 0.1s ease-in;
+    transition: transform 0.1s ease-in-out;
 }
 
 .white-shadow:hover {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
 }
 
 .skill-bar-container {
