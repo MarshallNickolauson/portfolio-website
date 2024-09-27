@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-import pic from '../assets/img/about-pic.jpg';
+// import pic from '../assets/img/about-pic.jpg';
+import pic from '../assets/img/about-banner.png';
 
 const AboutSection = () => {
     const { ref: divRef, inView: isVisible } = useInView({ threshold: 0.01 });
@@ -15,11 +16,11 @@ const AboutSection = () => {
             <div className='container mx-auto py-20 mt-10 lg:mt-20' id='about'>
                 <div ref={divRef} className="flex flex-col-reverse
              lg:flex-row items-center">
-                    <div className={`flex-shrink-0 ${hasBeenViewed ? 'fade-in-left' : 'opacity-0'}`}>
+                    <div className={`flex-shrink-0 mt-8 ${hasBeenViewed ? 'fade-in-left' : 'opacity-0'}`}>
                         <img
                             src={pic}
                             alt="About"
-                            className='w-11/12 max-w-full aspect-square object-cover mx-auto rounded-lg float-right white-shadow hover:cursor-pointer'
+                            className='max-w-full h-[450px] lg:h-[500px] aspect-square object-cover mx-auto rounded-lg lg:float-right white-shadow hover:cursor-pointer'
                         />
                     </div>
                     <div className={`flex-1 text-center lg:text-left lg:ml-12 ${hasBeenViewed ? 'fade-in-right' : 'opacity-0'}`}>
