@@ -12,7 +12,8 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom, #1A1C23, #31343E);
+    background: #2d3240;
+    /* background: linear-gradient(to bottom, #2b303d, #3f4756); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

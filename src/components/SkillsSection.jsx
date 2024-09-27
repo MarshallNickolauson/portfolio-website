@@ -83,7 +83,7 @@ const SkillsSection = () => {
 
     return (
         <div id='skills'>
-            <div className='container mx-auto mt-10 md:mt-20 py-10'>
+            <div className='container mx-auto mt-10 py-10'>
                 <div ref={divRef} className={`flex flex-col justify-center items-center ${hasBeenViewed ? 'fade-in-bottom' : ''}`}>
                     <p className='font-ropa text-white tracking-wider text-xl'>-My Tech Stack</p>
                     <h1 className='mt-4 text-mainOrange text-5xl font-roboto font-bold tracking-wider'>What can I do best?</h1>

@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         mainGray: '#31343E',
-        mainGrayDark: '#1A1C23',
-        darkGrayBackground: '#252830',
+        mainGrayDark: '#232630',
+        darkGrayBackground: '#1b1e26',
         mainOrange: '#F95353',
         mainOrangeDark: '#DE4A4A',
       },
