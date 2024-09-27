@@ -57,7 +57,7 @@ const Navbar = () => {
 
     return (
         <div className='relative z-50 mt-3'>
-            <nav className={`container mx-auto py-2 flex justify-between items-center transition-all duration-1000 transform ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <nav className={`container mx-auto px-5 lg:px-0 py-2 flex justify-between items-center transition-all duration-1000 transform ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                 {/* Logo */}
                 <h1 className='font-roboto font-bold text-3xl text-mainOrange'>{"<MDN />"}</h1>
 

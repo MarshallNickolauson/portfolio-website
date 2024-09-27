@@ -20,7 +20,7 @@ const AboutSection = () => {
                         <img
                             src={pic}
                             alt="About"
-                            className='max-w-full h-[450px] lg:h-[500px] aspect-square object-cover mx-auto rounded-lg lg:float-right white-shadow hover:cursor-pointer'
+                            className='max-w-full w-10/12 lg:w-full lg:h-[500px] aspect-square object-cover mx-auto rounded-lg lg:float-right white-shadow hover:cursor-pointer'
                         />
                     </div>
                     <div className={`flex-1 text-center lg:text-left lg:ml-12 ${hasBeenViewed ? 'fade-in-right' : 'opacity-0'}`}>
