@@ -44,7 +44,7 @@ const ProjectsSection = () => {
                         Each project provides insight to the development processes, showcasing how specific problems were addressed.
                     </p>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-y-5 lg:gap-y-8 mt-10 pb-10'>
+                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-y-5 lg:gap-y-8 mt-10 pb-10 ${hasBeenViewed ? 'fade-in-bottom' : ''}`}>
 
                     {projectsList.map((project, projectIndex) => (
                         <div key={projectIndex} className='flex justify-center bg-mainGray rounded-xl white-shadow hover:cursor-pointer w-11/12 mb-4 mx-auto'>

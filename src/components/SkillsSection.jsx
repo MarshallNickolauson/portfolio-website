@@ -34,7 +34,7 @@ const SkillsSection = () => {
                     url: "https://redux.js.org/introduction/getting-started/",
                     icon: <SiRedux className="text-3xl" color="#7349C2" />,
                     title: 'Redux',
-                    skill: 50,
+                    skill: 70,
                     description: 'A predictable state container for managing app-wide state in large applications.'
                 },
                 {
