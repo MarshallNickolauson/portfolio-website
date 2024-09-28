@@ -63,6 +63,7 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className='hidden md:flex space-x-10'>
+                    <a href='/' className='font-ropa text-white text-xl hover:underline'>Home</a>
                     <a href='#skills' className='font-ropa text-white text-xl hover:underline'>Skills</a>
                     <a href='#projects' className='font-ropa text-white text-xl hover:underline'>Projects</a>
                     <a href='#resume' className='font-ropa text-white text-xl hover:underline'>Resume</a>
@@ -87,6 +88,7 @@ const Navbar = () => {
                 ref={mobileMenu}
                 className={`fixed top-20 left-0 w-full py-6 bg-darkGrayBackground text-white flex flex-col justify-center items-center transform transition-all duration-500 ease-in-out ${menuOpen ? 'opacity-100' : 'hidden opacity-0'}`}
             >
+                <a href='/' className='font-ropa text-white text-2xl mb-6 hover:underline' onClick={toggleHamburgerIcon}>Home</a>
                 <a href='#skills' className='font-ropa text-white text-2xl mb-6 hover:underline' onClick={toggleHamburgerIcon}>Skills</a>
                 <a href='#projects' className='font-ropa text-white text-2xl mb-6 hover:underline' onClick={toggleHamburgerIcon}>Projects</a>
                 <a href='#resume' className='font-ropa text-white text-2xl mb-6 hover:underline' onClick={toggleHamburgerIcon}>Resume</a>

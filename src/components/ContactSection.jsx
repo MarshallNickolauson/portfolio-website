@@ -77,8 +77,8 @@ const ContactSection = () => {
 
                     <div className="text-lg mb-6 flex flex-row justify-center space-x-2">
                         <p className='text-white'>Or reach me directly at:</p>
-                        <a href="mailto:hello@yourname.com" className="text-mainOrange hover:underline">
-                            hello@yourname.com
+                        <a href="mailto:marshallnickolauson@gmail.com" className="text-mainOrange hover:underline">
+                            marshallnickolauson@gmail.com
                         </a>
                     </div>
 
