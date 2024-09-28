@@ -27,7 +27,6 @@ const ContactSection = () => {
                         I'm available for freelance work, collaborations, or just to say hello!
                     </p>
 
-                    {/* Contact Form */}
                     <form onSubmit={handleSubmit}>
                         <div className="mb-6">
                             <input
@@ -76,7 +75,6 @@ const ContactSection = () => {
                         </button>
                     </form>
 
-                    {/* Email and Social Links */}
                     <div className="text-lg mb-6 flex flex-row justify-center space-x-2">
                         <p className='text-white'>Or reach me directly at:</p>
                         <a href="mailto:hello@yourname.com" className="text-mainOrange hover:underline">
@@ -84,7 +82,6 @@ const ContactSection = () => {
                         </a>
                     </div>
 
-                    {/* Social Media Links */}
                     <div className="flex justify-center space-x-4">
                         <a href="https://www.linkedin.com/in/marshall-nickolauson-3a7b04274/" className="text-gray-300 hover:text-gray-400">
                             <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
