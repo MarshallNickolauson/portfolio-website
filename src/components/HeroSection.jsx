@@ -19,7 +19,7 @@ const HeroSection = () => {
     };
 
     return (
-        <div>
+        <section>
             <div className='container mx-auto mt-10 z-0'>
                 <div className={`flex flex-col md:flex-row justify-between items-center transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                     <div className={`space-y-16 mb-10 flex-1`}>
@@ -29,10 +29,10 @@ const HeroSection = () => {
                         </div>
                         <p className='text-white text-center md:text-left tracking-wider text-xl px-4 md:px-0 md:w-10/12'>I specialize in building fast, scale-able websites and web apps using the <span onClick={() => scrollToSection('skills')} className='relative font-bold tracking-wider bg-gradient-to-r from-mainOrange to-blue-400 bg-clip-text text-transparent hover:cursor-pointer'>MERN<span className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-mainOrange to-blue-400"></span></span> stack.</p>
                         <div className='flex flex-row space-x-2 justify-center md:float-left'>
-                            <button className='font-ropa text-xl text-white px-3 py-2 border border-mainOrangeDark rounded-md hover:bg-mainOrangeDark transition duration-100'>
+                            <button onClick={() => scrollToSection('projects')} className='font-ropa text-xl text-white px-3 py-2 border border-mainOrangeDark rounded-md hover:bg-mainOrangeDark transition duration-100'>
                                 View Work
                             </button>
-                            <button className='font-ropa text-xl text-white px-3 py-2 border border-mainOrangeDark rounded-md bg-mainOrangeDark hover:bg-mainOrange transition duration-100'>
+                            <button onClick={() => scrollToSection('contact')} className='font-ropa text-xl text-white px-3 py-2 border border-mainOrangeDark rounded-md bg-mainOrangeDark hover:bg-mainOrange transition duration-100'>
                                 Contact Me
                             </button>
                         </div>
@@ -46,7 +46,7 @@ const HeroSection = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

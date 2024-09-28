@@ -12,7 +12,7 @@ const AboutSection = () => {
     }
 
     return (
-        <div className='bg-darkGrayBackground'>
+        <section className='bg-darkGrayBackground'>
             <div className='container mx-auto py-20 mt-10 lg:mt-20' id='about'>
                 <div ref={divRef} className="flex flex-col-reverse
              lg:flex-row items-center">
@@ -36,7 +36,7 @@ const AboutSection = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

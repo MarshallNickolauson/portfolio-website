@@ -19,7 +19,7 @@ const ContactSection = () => {
     };
 
     return (
-        <div id='contact'>
+        <section id='contact'>
             <div className="container mx-auto mt-10 mb-60">
                 <div className="max-w-4xl mx-auto text-center space-y-6">
                     <h2 className="mt-4 text-mainOrange text-5xl font-roboto font-bold tracking-wider text-center px-2">Contact Me</h2>
@@ -99,7 +99,7 @@ const ContactSection = () => {
                     </div>
                 </div>
             </div>
-        </div >
+        </section>
     )
 }
 

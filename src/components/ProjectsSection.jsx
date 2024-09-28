@@ -34,7 +34,7 @@ const ProjectsSection = () => {
     ]
 
     return (
-        <div id='projects' className='bg-gray-700 pt-10 lg:pt-2'>
+        <section id='projects' className='bg-gray-700 pt-10 lg:pt-2'>
             <div className='container mx-auto mt-0 lg:mt-10'>
                 <div ref={divRef} className={`flex flex-col justify-center items-center ${hasBeenViewed ? 'fade-in-bottom' : ''}`}>
                     <p className='font-ropa text-white tracking-wider text-xl'>-Some Recent Projects</p>
@@ -70,7 +70,7 @@ const ProjectsSection = () => {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
