@@ -11,7 +11,8 @@ const router = createBrowserRouter(
       <Route path="/" element={<HomeScreen />} />
       <Route path="*" element={<NotFoundScreen />} />
     </>
-  )
+  ),
+  { basename: '/portfolio-website' }
 );
 
 createRoot(document.getElementById('root')).render(
