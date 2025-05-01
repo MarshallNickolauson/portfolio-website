@@ -2,7 +2,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const HeroSection = () => {
     return (
-        <div className='bg-gradient-to-t from-white to-mainBlueLight h-[500px] w-full pt-[60px]'>
+        <div className='bg-gradient-to-t from-white to-mainBlueLight h-[600px] w-full pt-[60px]'>
             <div className='flex flex-col items-center justify-center h-full'>
                 <h1 className='font-semibold text-[5rem] bg-gradient-to-r from-mainBlue/85 to-mainBlueDark bg-clip-text text-transparent'>Hi, I'm Marshall</h1>{' '}
                 <p className='font-medium text-mainGray text-[1.3rem] text-center'>

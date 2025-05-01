@@ -1,4 +1,5 @@
 import HeroSection from '../components/homescreen/HeroSection'
+import StatsSection from '../components/homescreen/StatsSection'
 import Navbar from "../components/Navbar"
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div>
       <Navbar />
       <HeroSection />
+      <StatsSection />
     </div>
   )
 }
