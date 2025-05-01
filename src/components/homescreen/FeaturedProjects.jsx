@@ -74,11 +74,11 @@ const FeaturedProjects = () => {
 
     return (
         <section className='pb-5'>
-            <h2 ref={titleRef} className={`text-2xl text-mainBlack font-semibold text-center mt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+            <h2 ref={titleRef} className={`text-3xl text-mainBlack font-semibold text-center mt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 Featured Projects
             </h2>
 
-            <p ref={subtitleRef} className={`text-sm text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+            <p ref={subtitleRef} className={`text-md text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
                 A selection of my best work that demonstrates my skills and expertise in creating impactful digital solutions.
             </p>
 
@@ -118,8 +118,11 @@ const FeaturedProjects = () => {
                 ))}
             </div>
 
-            <div ref={buttonRef} className={`flex items-center justify-center mt-8 ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
-                <button className='bg-transparent text-mainBlue border-[1px] border-mainBlue px-4 py-2 rounded-md hover:bg-mainBlue hover:text-white transition-all duration-200 flex items-center' onClick={() => navigate('/projects')}>
+            <div ref={buttonRef} className={`mt-6 flex justify-center ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+                <button
+                    className='text-mainBlue border border-mainBlue px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue hover:text-white transition flex items-center'
+                    onClick={() => navigate('/about')}
+                >
                     See All Projects <FaArrowRight className='ml-2' />
                 </button>
             </div>

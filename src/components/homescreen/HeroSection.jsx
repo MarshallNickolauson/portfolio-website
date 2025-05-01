@@ -46,7 +46,7 @@ const HeroSection = () => {
                 >
                     Full Stack Developer specialized in building beautiful,
                     <br />
-                    lightning-fast web apps primarily with the MERN stack.
+                    lightning-fast web apps using the MERN stack.
                 </p>
                 <div
                     className={`flex space-x-4 mt-5 ${

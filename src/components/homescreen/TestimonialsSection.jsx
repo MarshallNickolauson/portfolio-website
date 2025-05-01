@@ -50,13 +50,13 @@ const TestimonialsSection = () => {
         <section className='bg-mainBlueLight py-6'>
             <h2
                 ref={titleRef}
-                className={`text-3xl text-mainBlack font-bold text-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                className={`text-3xl text-mainBlack font-semibold text-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 style={{ animationDelay: '0.1s' }}
             >
                 What <span className='text-red-500'>Real</span> People Say
             </h2>
             <p
-                className={`text-base text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                className={`text-base text-md text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 style={{ animationDelay: '0.3s' }}
             >
                 Here's what some people have said so far about my work.

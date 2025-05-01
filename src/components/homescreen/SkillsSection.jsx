@@ -44,18 +44,21 @@ const SkillsSection = () => {
 
     return (
         <section className='pb-10'>
-            <h2 ref={titleRef} className={`text-2xl text-mainBlack font-semibold text-center mt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+            <h2 ref={titleRef} className={`text-3xl text-mainBlack font-semibold text-center mt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 How I Work
             </h2>
-            <p ref={subtitleRef} className={`text-sm text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
+            <p ref={subtitleRef} className={`text-md text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
                 A few of the most important skills to turn challenges into opportunities.
             </p>
             <div className='mt-8'>
                 <h1 className='text-center'>Cards like from the skills page here</h1>
             </div>
-            <div ref={buttonRef} className={`flex items-center justify-center mt-8 ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
-                <button className='bg-transparent text-mainBlue border-[1px] border-mainBlue px-4 py-2 rounded-md hover:bg-mainBlue hover:text-white transition-all duration-200 flex items-center' onClick={() => navigate('/skills')}>
-                    Explore All Skills <FaArrowRight className='ml-2' />
+            <div ref={buttonRef} className={`mt-6 flex justify-center ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+                <button
+                    className='text-mainBlue border border-mainBlue px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue hover:text-white transition flex items-center'
+                    onClick={() => navigate('/about')}
+                >
+                    Explore Skills <FaArrowRight className='ml-2' />
                 </button>
             </div>
         </section>
