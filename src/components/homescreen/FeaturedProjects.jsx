@@ -116,7 +116,7 @@ const FeaturedProjects = () => {
 
             <div ref={buttonRef} className={`flex items-center justify-center mt-8 ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 <button className='bg-transparent text-mainBlue border-[1px] border-mainBlue px-4 py-2 rounded-md hover:bg-mainBlue hover:text-white transition-all duration-200 flex items-center'>
-                    View All Projects <FaArrowRight className='ml-2' />
+                    See All Projects <FaArrowRight className='ml-2' />
                 </button>
             </div>
         </section>
