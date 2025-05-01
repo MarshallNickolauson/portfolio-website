@@ -1,3 +1,4 @@
+import AboutMeSection from '../components/homescreen/AboutMeSection'
 import FeaturedProjects from '../components/homescreen/FeaturedProjects'
 import HeroSection from '../components/homescreen/HeroSection'
 import MovingSkillsSection from '../components/homescreen/MovingSkillsSection'
@@ -17,6 +18,7 @@ function App() {
       <FeaturedProjects />
       <SkillsSection />
       <TestimonialsSection />
+      <AboutMeSection />
     </div>
   )
 }
