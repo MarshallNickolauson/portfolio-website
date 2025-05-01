@@ -43,7 +43,7 @@ const SkillsSection = () => {
     }, []);
 
     return (
-        <section className='pb-5'>
+        <section className='pb-10'>
             <h2 ref={titleRef} className={`text-2xl text-mainBlack font-semibold text-center mt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 How I Work
             </h2>
