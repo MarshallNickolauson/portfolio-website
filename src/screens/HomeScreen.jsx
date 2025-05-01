@@ -1,3 +1,4 @@
+import Footer from '../components/Footer'
 import AboutMeSection from '../components/homescreen/AboutMeSection'
 import ContactMeSection from '../components/homescreen/ContactMeSection'
 import FeaturedProjects from '../components/homescreen/FeaturedProjects'
@@ -21,6 +22,7 @@ function App() {
       <TestimonialsSection />
       <AboutMeSection />
       <ContactMeSection />
+      <Footer />
     </div>
   )
 }
