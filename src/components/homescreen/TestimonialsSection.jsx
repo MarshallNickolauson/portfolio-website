@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
                 Here's what some people have said so far about my work.
             </p>
 
-            <div className='flex flex-wrap justify-center gap-6 mt-8 px-4 pb-1'>
+            <div className='flex flex-wrap justify-center gap-6 mt-8 px-4 pb-2'>
                 {testimonials.map((testimonial, index) => (
                     <div
                         key={testimonial.id}
