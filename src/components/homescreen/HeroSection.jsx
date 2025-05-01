@@ -11,12 +11,12 @@ const HeroSection = () => {
                     lightning-fast web apps primarily with the MERN stack.
                 </p>
                 <div className='flex space-x-4 mt-5'>
-                    <button className='bg-mainBlue text-white px-[20px] py-3 rounded-md hover:bg-mainBlue/90 transition duration-200'>
+                    <button className='bg-mainBlue text-white px-[20px] py-3 rounded-md hover:bg-transparent border-[1px] border-mainBlue hover:text-mainBlue transition-all duration-200'>
                         <h1 className='flex items-center justify-center'>
                             View Projects <FaArrowRight className='ml-2' />
                         </h1>
                     </button>
-                    <button className='bg-transparent text-mainBlue px-[35px] py-3 rounded-md border-[1px] border-mainBlue hover:bg-mainBlue/10 transition duration-200'>
+                    <button className='bg-transparent text-mainBlue px-[35px] py-3 rounded-md border-[1px] border-mainBlue hover:bg-mainBlue hover:text-white transition-all duration-200'>
                         <h1 className='flex items-center justify-center'>Contact Me</h1>
                     </button>
                 </div>
