@@ -30,6 +30,7 @@ const AboutMeSection = () => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
+                    setIsVisible(true);
                     setIsButtonVisible(true);
                 }
             },
@@ -61,7 +62,7 @@ const AboutMeSection = () => {
             <div
                 ref={buttonRef}
                 className={`mt-6 flex justify-center ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`}
-                style={{ animationDelay: '0.5s' }}
+                style={{ animationDelay: '0.3s' }}
             >
                 <button
                     className='text-mainBlue border border-mainBlue px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue hover:text-white transition flex items-center'
