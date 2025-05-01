@@ -1,3 +1,4 @@
+import FeaturedProjects from '../components/homescreen/FeaturedProjects'
 import HeroSection from '../components/homescreen/HeroSection'
 import MovingSkillsSection from '../components/homescreen/MovingSkillsSection'
 import StatsSection from '../components/homescreen/StatsSection'
@@ -11,6 +12,7 @@ function App() {
       <HeroSection />
       <StatsSection />
       <MovingSkillsSection />
+      <FeaturedProjects />
     </div>
   )
 }
