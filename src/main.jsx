@@ -12,7 +12,7 @@ const router = createBrowserRouter(
       <Route path="*" element={<NotFoundScreen />} />
     </>
   ),
-  { basename: '/portfolio-website' }
+//   { basename: '/portfolio-website' }
 );
 
 createRoot(document.getElementById('root')).render(

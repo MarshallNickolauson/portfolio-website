@@ -4,19 +4,7 @@
 
 html {
     scroll-behavior: smooth;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    background: #2d3240;
-    /* background: linear-gradient(to bottom, #2b303d, #3f4756); */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    font-family: Poppins, sans-serif;
 }
 
 @keyframes fadeInLeft {
@@ -81,90 +69,4 @@ body {
 
 .fade-in-bottom-slow {
     animation: fadeInBottom 2s forwards;
-}
-
-.white-shadow {
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.35);
-    transform: translateY(0);
-    transition: box-shadow 0.1s ease-in;
-    transition: transform 0.1s ease-in-out;
-}
-
-.white-shadow:hover {
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
-    transform: translateY(-5px);
-}
-
-.hover-move-up {
-    transform: translateY(0);
-    transition: transform 0.1s ease-in-out;
-}
-
-.hover-move-up:hover {
-    transform: translateY(-2px);
-}
-
-.skill-bar-container {
-    width: 100%;
-    height: 10px;
-    background-color: #e0e0df;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 8px;
-}
-
-.skill-bar-fill {
-    height: 100%;
-    background: linear-gradient(to right, #f95353, #60a5fa);
-    transition: width 2s ease-in-out;
-    border-radius: 10px 0 0 10px;
-}
-
-/* Hamburger Menu */
-.hamburger {
-    cursor: pointer;
-    width: 30px;
-    height: 24px;
-    transition: all 0.25s;
-    position: relative;
-    z-index: 50;
-}
-
-.hamburger-top,
-.hamburger-middle,
-.hamburger-bottom {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background: white;
-    transform: rotate(0);
-    transition: all 0.5s;
-}
-
-.hamburger-middle {
-    transform: translateY(7px);
-}
-
-.hamburger-bottom {
-    transform: translateY(14px);
-}
-
-.open {
-    transform: rotate(0);
-    transform: translateY(0px);
-}
-
-.open .hamburger-top {
-    transform: rotate(45deg) translateY(6px) translate(6px);
-}
-
-.open .hamburger-middle {
-    display: none;
-}
-
-.open .hamburger-bottom {
-    transform: rotate(-45deg) translateY(6px) translate(-6px);
 }

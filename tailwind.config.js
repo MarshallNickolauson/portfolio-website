@@ -7,15 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        mainGray: '#31343E',
-        mainGrayDark: '#232630',
-        darkGrayBackground: '#1b1e26',
-        mainOrange: '#F95353',
-        mainOrangeDark: '#DE4A4A',
+        mainBlue: '#3174F1',
+        mainBlueDark: '#2564EB',
+        mainBlueLight: '#EFF6FF',
+        mainGray: '#6F7C98',
+        mainGrayDark: '#676B74',
+        mainBlack: '#303030',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         ropa: ['Ropa Sans', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
