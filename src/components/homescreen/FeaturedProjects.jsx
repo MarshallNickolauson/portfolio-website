@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const FeaturedProjects = () => {
+    const navigate = useNavigate();
+
     const [isVisible, setIsVisible] = useState(false);
     const [isButtonVisible, setIsButtonVisible] = useState(false);
 
@@ -50,7 +53,7 @@ const FeaturedProjects = () => {
             { threshold: 0.4 }
         );
 
-        if (subtitleRef.current) observer.observe(subtitleRef.current);
+        if (titleRef.current) observer.observe(titleRef.current);
         return () => observer.disconnect();
     }, []);
 
@@ -58,6 +61,7 @@ const FeaturedProjects = () => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
+                    setIsVisible(true);
                     setIsButtonVisible(true);
                 }
             },
@@ -69,12 +73,12 @@ const FeaturedProjects = () => {
     }, []);
 
     return (
-        <section className='pb-10'>
-            <h2 ref={titleRef} className={`text-2xl text-mainBlack font-bold text-center mt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+        <section className='pb-5'>
+            <h2 ref={titleRef} className={`text-2xl text-mainBlack font-semibold text-center mt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 Featured Projects
             </h2>
 
-            <p ref={subtitleRef} className={`text-sm text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
+            <p ref={subtitleRef} className={`text-sm text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
                 A selection of my best work that demonstrates my skills and expertise in creating impactful digital solutions.
             </p>
 
@@ -115,7 +119,7 @@ const FeaturedProjects = () => {
             </div>
 
             <div ref={buttonRef} className={`flex items-center justify-center mt-8 ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
-                <button className='bg-transparent text-mainBlue border-[1px] border-mainBlue px-4 py-2 rounded-md hover:bg-mainBlue hover:text-white transition-all duration-200 flex items-center'>
+                <button className='bg-transparent text-mainBlue border-[1px] border-mainBlue px-4 py-2 rounded-md hover:bg-mainBlue hover:text-white transition-all duration-200 flex items-center' onClick={() => navigate('/projects')}>
                     See All Projects <FaArrowRight className='ml-2' />
                 </button>
             </div>
