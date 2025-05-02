@@ -66,7 +66,7 @@ const JourneySection = () => {
 
                         {index < journeyData.length - 1 && (
                             <div
-                                className={`absolute left-[10px] top-4 w-[3px] bg-mainBlue/60 z-0 transform -translate-x-1/2 ${isVisible ? 'draw-down' : 'opacity-0'}`}
+                                className={`absolute left-[10px] top-4 w-[3px] bg-mainBlue/70 z-0 transform -translate-x-1/2 ${isVisible ? 'draw-down' : 'opacity-0'}`}
                                 style={{
                                     animationDelay: `${1.3 + index * 0.5}s`,
                                     animationFillMode: 'forwards',
@@ -75,11 +75,11 @@ const JourneySection = () => {
                         )}
 
                         <h3 className='text-lg font-semibold text-mainBlack dark:text-white'>{item.date}</h3>
-                        <p className='text-md text-mainBlue font-medium mb-2'>
+                        <p className='text-md text-mainBlue dark:text-mainBlue/ font-medium mb-2'>
                             {item.title} {item.company && <span className='text-mainGray dark:text-white'>at {item.company}</span>}
                         </p>
                         <p className='text-sm text-mainGray dark:text-white'>{item.description}</p>
-                        <p className='text-sm italic text-mainBlueDark mt-2'>{item.verse}</p>
+                        <p className='text-sm italic text-mainBlueDark dark:text-mainBlue mt-2'>{item.verse}</p>
                     </div>
                 ))}
             </div>

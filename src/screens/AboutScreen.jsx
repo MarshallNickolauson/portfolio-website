@@ -5,6 +5,7 @@ import MyJourneySection from '../components/aboutscreen/MyJourneySection';
 import SoftSkillsSection from '../components/aboutscreen/SoftSkillsSection';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import EducationSection from '../components/aboutscreen/EducationSection';
 
 const AboutScreen = () => {
     const { pathname } = useLocation();
@@ -25,6 +26,7 @@ const AboutScreen = () => {
             <HeroSection />
             <MyJourneySection />
             <SoftSkillsSection />
+            <EducationSection />
             <Footer />
         </>
     );
