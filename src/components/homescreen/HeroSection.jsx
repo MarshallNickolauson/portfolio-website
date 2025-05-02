@@ -25,7 +25,7 @@ const HeroSection = () => {
     return (
         <div
             ref={containerRef}
-            className={`bg-gradient-to-t from-white to-mainBlueLight h-[650px] w-full pt-[60px] transition-opacity duration-700 ease-out ${
+            className={`bg-gradient-to-t from-white to-mainBlueLight h-[650px] w-full transition-opacity duration-700 ease-out ${
                 isVisible ? 'opacity-100 fade-in-bottom' : 'opacity-0'
             }`}
         >

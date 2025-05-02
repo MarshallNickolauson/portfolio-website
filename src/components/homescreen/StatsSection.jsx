@@ -5,7 +5,7 @@ const StatsSection = () => {
         { number: 15, label: 'Projects Completed' },
         { number: 3, label: 'Years of Experience' },
         { number: 20, label: 'Specialized Certificates' },
-        { number: 1000, label: 'Hour Coding' },
+        { number: 1000, label: 'Hours Coding' },
     ];
 
     const [counts, setCounts] = useState(stats.map(() => 0));
@@ -56,7 +56,15 @@ const StatsSection = () => {
         >
             <div className='flex space-x-20'>
                 {stats.map((stat, index) => (
-                    <div key={index} className='flex flex-col items-center'>
+                    <div
+                        key={index}
+                        className={`flex flex-col items-center opacity-0 transform translate-y-10 transition-all duration-500 delay-${index * 200}`}
+                        style={{
+                            animation: hasAnimated.current
+                                ? `fadeUp 0.5s ease-out ${index * 0.2}s forwards`
+                                : 'none',
+                        }}
+                    >
                         <h1 className='text-[2.5rem] font-semibold text-mainBlueDark text-center'>
                             {counts[index]}+
                         </h1>
@@ -66,6 +74,20 @@ const StatsSection = () => {
                     </div>
                 ))}
             </div>
+            <style>
+                {`
+                    @keyframes fadeUp {
+                        from {
+                            opacity: 0;
+                            transform: translateY(50px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                `}
+            </style>
         </section>
     );
 };
