@@ -120,7 +120,7 @@ const FeaturedProjects = () => {
                 ))}
             </div>
 
-            <div ref={buttonRef} className={`mt-6 flex justify-center ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`}>
+            <div ref={buttonRef} className={`mt-10 flex justify-center ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`}>
                 <button
                     className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition flex items-center'
                     onClick={() => navigate('/projects')}
