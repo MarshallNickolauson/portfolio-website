@@ -29,7 +29,7 @@ const HeroSection = () => {
 
     return (
         <>
-            <div className='top-0 w-full h-[60px] bg-white dark:bg-darkMainBlue z-40' />
+            <div className='top-0 w-full h-[60px] bg-white dark:bg-darkMainBlue/80 z-40' />
             <div className={`bg-gradient-to-t from-white to-mainBlueLight dark:from-darkMainBlue dark:to-darkMainBlue/60 h-[580px] w-full`}>
                 <div ref={containerRef} className='flex flex-col items-center justify-center h-full'>
                     <h1

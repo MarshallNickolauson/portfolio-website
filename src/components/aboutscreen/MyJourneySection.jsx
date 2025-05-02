@@ -43,7 +43,7 @@ const JourneySection = () => {
                         setIsVisible(true);
                     }
                 },
-                { threshold: 0.4 }
+                { threshold: 0.2 }
             );
 
             if (containerRef.current) observer.observe(containerRef.current);
@@ -55,18 +55,18 @@ const JourneySection = () => {
     }, []);
 
     return (
-        <section className='bg-white dark:bg-darkMainBlueLight px-6'>
+        <section className='bg-white dark:bg-darkMainBlueLight px-6' ref={containerRef}>
             <h2 className={`text-3xl md:text-4xl pt-10 font-semibold text-center mb-8 text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: `0.2s` }}>
                 My Journey
             </h2>
-            <div className='relative max-w-4xl mx-auto' ref={containerRef}>
+            <div className='relative max-w-4xl mx-auto'>
                 {journeyData.map((item, index) => (
                     <div key={index} className={`relative pl-12 pb-10 ${isVisible ? 'fade-in-left' : 'opacity-0'}`} style={{ animationDelay: `${0.5 + index * 0.2}s` }}>
                         <div className='absolute left-[10px] top-[7px] w-4 h-4 rounded-full bg-mainBlue z-10 transform -translate-x-1/2' />
 
                         {index < journeyData.length - 1 && (
                             <div
-                                className={`absolute left-[10px] top-4 w-px bg-mainBlue/60 z-0 transform -translate-x-1/2 ${isVisible ? 'draw-down' : 'opacity-0'}`}
+                                className={`absolute left-[10px] top-4 w-[3px] bg-mainBlue/60 z-0 transform -translate-x-1/2 ${isVisible ? 'draw-down' : 'opacity-0'}`}
                                 style={{
                                     animationDelay: `${1.3 + index * 0.5}s`,
                                     animationFillMode: 'forwards',
