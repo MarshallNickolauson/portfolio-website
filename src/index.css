@@ -90,10 +90,6 @@ html {
     animation: drawDown 0.75s ease-out forwards;
 }
 
-.soft-shadow {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-}
-
 @keyframes scroll-left {
     0% {
         transform: translateX(0%);

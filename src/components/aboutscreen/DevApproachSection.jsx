@@ -55,7 +55,7 @@ const DevApproachSection = () => {
                 {cardData.map((card, index) => (
                     <div
                         key={index}
-                        className={`bg-white dark:bg-darkMainBlueLight soft-shadow rounded-lg p-6 border-[1px] border-mainBlue ${
+                        className={`bg-white dark:bg-darkMainBlueLight rounded-lg p-6 border-[1px] border-mainBlue ${
                             isVisible ? 'fade-in-bottom' : 'opacity-0'
                         }`}
                         style={{ animationDelay: `${0.4 + index * 0.1}s` }}
