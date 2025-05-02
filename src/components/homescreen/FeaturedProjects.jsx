@@ -73,8 +73,8 @@ const FeaturedProjects = () => {
     }, []);
 
     return (
-        <section className='pb-5'>
-            <h2 ref={titleRef} className={`text-3xl text-mainBlack font-semibold text-center mt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+        <section className='pb-5 bg-white dark:bg-darkMainBlue'>
+            <h2 ref={titleRef} className={`text-3xl text-mainBlack dark:text-white font-semibold text-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 Featured Projects
             </h2>
 
@@ -86,16 +86,16 @@ const FeaturedProjects = () => {
                 {projects.map((project, index) => (
                     <div
                         key={project.id}
-                        className={`bg-white shadow-md shadow-mainGray/30 rounded-md w-80 border-[1px] border-mainBlueLight overflow-hidden flex flex-col justify-between space-y-4 ${
+                        className={`bg-white dark:bg-darkMainBlue shadow-md shadow-mainGray/30 rounded-md w-80 border-[1px] border-mainBlueLight overflow-hidden flex flex-col justify-between space-y-4 ${
                             isVisible ? 'fade-in-bottom' : 'opacity-0'
                         }`}
                         style={{ animationDelay: `${0.2 + index * 0.3}s` }}
                     >
-                        <img src={project.image} alt={project.title} className='rounded-t-lg w-full h-48 object-cover' />
+                        <img src={project.image} alt={project.title} className='rounded-t-md w-full h-48 object-cover' />
 
                         <div className='px-3'>
-                            <h3 className='text-xl font-bold text-black mb-2'>{project.title}</h3>
-                            <p className='text-xs text-mainGrayDark'>{project.description}</p>
+                            <h3 className='text-xl font-bold text-mainBlack dark:text-white mb-2'>{project.title}</h3>
+                            <p className='text-xs text-mainGrayDark dark:text-white/60'>{project.description}</p>
                         </div>
 
                         <div className='flex flex-wrap gap-2 px-2'>
@@ -106,11 +106,11 @@ const FeaturedProjects = () => {
                             ))}
                         </div>
 
-                        <div className='flex space-x-4 pt-2 px-2 pb-3'>
-                            <a href={project.liveDemo} className='text-mainBlue border border-mainBlue px-4 py-2 rounded-md hover:bg-mainBlue hover:text-white transition duration-200 text-sm'>
+                        <div className='flex space-x-2 pt-2 px-2 pb-3'>
+                            <a href={project.liveDemo} className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-4 py-2 rounded-md hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition duration-200 text-sm'>
                                 Live Demo
                             </a>
-                            <a href={project.github} className='text-mainBlue border border-mainBlue px-4 py-2 rounded-md hover:bg-mainBlue hover:text-white transition duration-200 text-sm'>
+                            <a href={project.github} className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-4 py-2 rounded-md hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition duration-200 text-sm'>
                                 GitHub
                             </a>
                         </div>
@@ -120,7 +120,7 @@ const FeaturedProjects = () => {
 
             <div ref={buttonRef} className={`mt-6 flex justify-center ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`}>
                 <button
-                    className='text-mainBlue border border-mainBlue px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue hover:text-white transition flex items-center'
+                    className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition flex items-center'
                     onClick={() => navigate('/projects')}
                 >
                     See All Projects <FaArrowRight className='ml-2' />

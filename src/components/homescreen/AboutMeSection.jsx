@@ -42,10 +42,10 @@ const AboutMeSection = () => {
     }, []);
 
     return (
-        <section className='py-12 text-center px-4'>
+        <section className='py-12 text-center px-4 bg-white dark:bg-darkMainBlue'>
             <h2
                 ref={titleRef}
-                className={`text-3xl font-semibold text-mainBlack ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                className={`text-3xl font-semibold text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 style={{ animationDelay: '0.1s' }}
             >
                 About Me
@@ -53,7 +53,7 @@ const AboutMeSection = () => {
 
             <p
                 ref={paragraphRef}
-                className={`text-mainGray text-md text-base max-w-xl mx-auto mt-4 leading-relaxed ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                className={`text-mainGray dark:text-white/80 text-md text-base max-w-xl mx-auto mt-4 leading-relaxed ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 style={{ animationDelay: '0.3s' }}
             >
                 I am a passionate developer with 3+ years of experience building web applications that would solve real world problems. My approach combines technical expertise with a deep understanding of the design of user needs and business objectives. I believe in making solutions that aren’t just functional, but also intuitive, fast, and scalable.
@@ -65,7 +65,7 @@ const AboutMeSection = () => {
                 style={{ animationDelay: '0.3s' }}
             >
                 <button
-                    className='text-mainBlue border border-mainBlue px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue hover:text-white transition flex items-center'
+                    className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition flex items-center'
                     onClick={() => navigate('/about')}
                 >
                     Learn More About Me <FaArrowRight className='ml-2' />

@@ -21,8 +21,8 @@ const MovingSkillsSection = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className={`bg-white my-8 overflow-hidden `}>
-            <div className='relative w-full'>
+        <section className={`bg-white dark:bg-darkMainBlue py-8 overflow-hidden `}>
+            <div ref={containerRef} className='relative w-full'>
                 <div className='marquee-track'>
                     {repeatedSkills.map((skill, index) => (
                         <span key={index} className='font-bold text-mainBlue text-sm bg-mainBlueLight px-5 py-2 mx-2 rounded-full border-[1px] border-mainBlue'>

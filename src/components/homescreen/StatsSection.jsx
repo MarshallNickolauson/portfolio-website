@@ -52,7 +52,7 @@ const StatsSection = () => {
     return (
         <section
             ref={containerRef}
-            className='bg-mainBlueLight h-[180px] w-full flex items-center justify-center'
+            className='bg-mainBlueLight dark:bg-white h-[180px] w-full flex items-center justify-center'
         >
             <div className='flex space-x-20'>
                 {stats.map((stat, index) => (

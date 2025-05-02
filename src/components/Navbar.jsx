@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`fixed w-full z-50 py-4 backdrop-blur-lg dark:border-0 border-b-[1px] border-mainBlue/10 bg-transparent dark:bg-black/20 transition-colors duration-300`}>
+            <nav className={`fixed w-full z-50 py-4 backdrop-blur-2xl border-b-[1px] border-mainBlue/10 dark:border-mainBlack/50 bg-transparent dark:bg-black/30 transition-colors duration-300`}>
                 <div className='flex justify-between items-center px-4 max-w-[1200px] mx-auto'>
                     <Link to='/' className='text-mainBlue font-semibold text-lg'>
                         Marshall Nickolauson
@@ -23,7 +23,7 @@ const Navbar = () => {
                                     key={path}
                                     to={path}
                                     className={`hover:text-mainBlue font-semibold transition-colors duration-200 text-md ${
-                                        location.pathname === path ? 'text-mainBlue' : 'text-mainGrayDark'
+                                        location.pathname === path ? 'text-mainBlue' : 'text-mainGrayDark dark:text-white dark:hover:text-mainBlue'
                                     }`}
                                 >
                                     {names[i]}
@@ -31,9 +31,9 @@ const Navbar = () => {
                             );
                         })}
                         {darkMode ? (
-                            <MdOutlineWbSunny className='text-white cursor-pointer' size={20} onClick={toggleTheme} />
+                            <MdOutlineWbSunny className='text-white cursor-pointer hover:text-mainBlue' size={20} onClick={toggleTheme} />
                         ) : (
-                            <LuMoon className='text-mainBlack cursor-pointer' size={20} onClick={toggleTheme} />
+                            <LuMoon className='text-mainBlack cursor-pointer hover:text-mainBlue' size={20} onClick={toggleTheme} />
                         )}
                     </div>
                 </div>

@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
     }, []);
 
     return (
-        <section className='bg-mainBlueLight py-6'>
+        <section className='bg-mainBlueLight dark:bg-white py-6'>
             <h2
                 ref={titleRef}
                 className={`text-3xl text-mainBlack font-semibold text-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}

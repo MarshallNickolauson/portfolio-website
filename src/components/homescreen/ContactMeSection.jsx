@@ -42,7 +42,7 @@ const ContactMeSection = () => {
     }, []);
 
     return (
-        <section className='py-12 text-center px-4 bg-mainBlueLight'>
+        <section className='py-12 text-center px-4 bg-mainBlueLight dark:bg-white'>
             <h2
                 ref={titleRef}
                 className={`text-3xl font-semibold text-mainBlack ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
