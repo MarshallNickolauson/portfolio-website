@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import midnightDinerImage from '../../assets/img/midnight-diner.png';
+import theInternationalArticlesImage from '../../assets/img/the-international-articles.png';
 
 const FeaturedProjects = () => {
     const navigate = useNavigate();
@@ -16,21 +18,21 @@ const FeaturedProjects = () => {
     const projects = [
         {
             id: 1,
-            title: 'Project 1',
-            description: 'A brief project description of this project and the technologies used to build it.',
-            image: 'https://picsum.photos/seed/picsum/600/400',
-            tags: ['React', 'JavaScript', 'CSS'],
-            liveDemo: '#',
-            github: '#',
+            title: 'Midnight Diner',
+            description: 'This full-stack MERN application allows you to explore a delightful culinary experience.',
+            image: midnightDinerImage,
+            tags: ['React', 'Node.js', 'MongoDB'],
+            liveDemo: 'https://github.com/MarshallNickolauson/midnight-diner',
+            github: 'https://github.com/MarshallNickolauson/midnight-diner',
         },
         {
             id: 2,
-            title: 'Project 2',
-            description: 'A brief project description of this project and the technologies used to build it.',
-            image: 'https://picsum.photos/seed/picsum/600/400',
-            tags: ['React', 'JavaScript', 'CSS'],
-            liveDemo: '#',
-            github: '#',
+            title: 'The International Articles',
+            description: 'This full-stack application allows you to view articles in multiple languages simultaneously, as well as write your own articles and use AI to generate translations.',
+            image: theInternationalArticlesImage,
+            tags: ['React', 'Docker', 'Redis'],
+            liveDemo: 'https://github.com/MarshallNickolauson/the-international-articles',
+            github: 'https://github.com/MarshallNickolauson/the-international-articles',
         },
         {
             id: 3,
@@ -86,16 +88,16 @@ const FeaturedProjects = () => {
                 {projects.map((project, index) => (
                     <div
                         key={project.id}
-                        className={`bg-white dark:bg-darkMainBlue shadow-md shadow-mainGray/30 rounded-md w-80 border-[1px] border-mainBlueLight overflow-hidden flex flex-col justify-between space-y-4 ${
+                        className={`bg-white dark:bg-darkMainBlue shadow-md shadow-mainGray/30 rounded-md w-80 border-[1px] border-mainBlue/30 overflow-hidden flex flex-col justify-between space-y-4 ${
                             isVisible ? 'fade-in-bottom' : 'opacity-0'
                         }`}
                         style={{ animationDelay: `${0.2 + index * 0.3}s` }}
                     >
-                        <img src={project.image} alt={project.title} className='rounded-t-md w-full h-48 object-cover' />
+                        <img src={project.image} alt={project.title} className='rounded-t-md w-full h-48 object-cover shadow-sm shadow-mainBlack/20' />
 
                         <div className='px-3'>
-                            <h3 className='text-xl font-bold text-mainBlack dark:text-white mb-2'>{project.title}</h3>
-                            <p className='text-xs text-mainGrayDark dark:text-white/60'>{project.description}</p>
+                            <h3 className='text-xl font-semibold text-mainBlack dark:text-white mb-2'>{project.title}</h3>
+                            <p className='text-xs text-mainGrayDark dark:text-white/60 line-clamp-2'>{project.description}</p>
                         </div>
 
                         <div className='flex flex-wrap gap-2 px-2'>
