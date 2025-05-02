@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { LuMoon } from 'react-icons/lu';
+import { MdOutlineWbSunny } from 'react-icons/md';
 import { useTheme } from '../context/ThemeContext';
 
 const Navbar = () => {
     const location = useLocation();
-    const { toggleTheme } = useTheme();
+    const { darkMode, toggleTheme } = useTheme();
 
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -42,7 +43,12 @@ const Navbar = () => {
                             </Link>
                         );
                     })}
-                    <LuMoon className='text-mainBlack cursor-pointer' size={20} onClick={toggleTheme} />
+
+                    {darkMode ? (
+                        <MdOutlineWbSunny className='text-white cursor-pointer' size={20} onClick={toggleTheme} />
+                    ) : (
+                        <LuMoon className='text-mainBlack cursor-pointer' size={20} onClick={toggleTheme} />
+                    )}
                 </div>
             </div>
         </nav>
