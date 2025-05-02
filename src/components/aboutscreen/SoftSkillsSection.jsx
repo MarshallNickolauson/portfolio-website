@@ -20,14 +20,22 @@ const SoftSkillsSection = () => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsVisible(true);
-            }
-        });
+        const handleReady = () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.target === containerRef.current && entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                },
+                { threshold: 0.4 }
+            );
 
-        if (containerRef.current) observer.observe(containerRef.current);
-        return () => observer.disconnect();
+            if (containerRef.current) observer.observe(containerRef.current);
+        };
+
+        window.addEventListener('about-scroll-reset-done', handleReady);
+
+        return () => window.removeEventListener('about-scroll-reset-done', handleReady);
     }, []);
 
     return (

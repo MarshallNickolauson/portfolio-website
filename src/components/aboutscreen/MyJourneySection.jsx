@@ -36,22 +36,27 @@ const JourneySection = () => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsVisible(true);
-            }
-        });
+        const handleReady = () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.target === containerRef.current && entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                },
+                { threshold: 0.4 }
+            );
 
-        if (containerRef.current) observer.observe(containerRef.current);
-        return () => observer.disconnect();
+            if (containerRef.current) observer.observe(containerRef.current);
+        };
+
+        window.addEventListener('about-scroll-reset-done', handleReady);
+
+        return () => window.removeEventListener('about-scroll-reset-done', handleReady);
     }, []);
 
     return (
         <section className='bg-white dark:bg-darkMainBlueLight px-6'>
-            <h2
-                className={`text-3xl md:text-4xl pt-10 font-semibold text-center mb-8 text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
-                style={{ animationDelay: `0.2s` }}
-            >
+            <h2 className={`text-3xl md:text-4xl pt-10 font-semibold text-center mb-8 text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: `0.2s` }}>
                 My Journey
             </h2>
             <div className='relative max-w-4xl mx-auto' ref={containerRef}>

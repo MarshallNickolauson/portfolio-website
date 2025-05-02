@@ -65,17 +65,17 @@ html {
 
 .fade-in-left {
     opacity: 0;
-    animation: fadeInLeft 0.75s ease-out forwards;
+    animation: fadeInLeft 0.5s ease-out forwards;
 }
 
 .fade-in-right {
     opacity: 0;
-    animation: fadeInRight 0.75s ease-out forwards;
+    animation: fadeInRight 0.5s ease-out forwards;
 }
 
 .fade-in-bottom {
     opacity: 0;
-    animation: fadeInBottom 0.75s ease-out forwards;
+    animation: fadeInBottom 0.5s ease-out forwards;
 }
 
 .fade-in {

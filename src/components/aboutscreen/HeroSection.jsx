@@ -10,14 +10,22 @@ const HeroSection = () => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsVisible(true);
-            }
-        });
+        const handleReady = () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.target === containerRef.current && entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                },
+                { threshold: 0.4 }
+            );
 
-        if (containerRef.current) observer.observe(containerRef.current);
-        return () => observer.disconnect();
+            if (containerRef.current) observer.observe(containerRef.current);
+        };
+
+        window.addEventListener('about-scroll-reset-done', handleReady);
+
+        return () => window.removeEventListener('about-scroll-reset-done', handleReady);
     }, []);
 
     return (
@@ -25,16 +33,15 @@ const HeroSection = () => {
             <div className='flex justify-center pt-8'>
                 <h1
                     className={`text-4xl font-semibold bg-gradient-to-r from-mainBlue/80 to-mainBlueDark bg-clip-text text-transparent ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
-                    style={{ animationDelay: '0.1s' }}
                 >
                     About Me
                 </h1>
             </div>
             <div className='flex items-center pt-[50px] max-w-[1200px] mx-auto px-4'>
-                <div className={`w-1/3 flex justify-center ${isVisible ? 'fade-in-right' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+                <div className={`w-1/3 flex justify-center ${isVisible ? 'fade-in-right' : 'opacity-0'}`}>
                     <img src={pfp} alt='Marshall Nickolauson PFP' className='w-[250px] h-full rounded-full border-[3px] border-mainBlue/50 shadow-md object-cover' />
                 </div>
-                <div className={`w-2/3 flex flex-col items-start justify-center pl-[50px] space-y-4 ${isVisible ? 'fade-in-left' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+                <div className={`w-2/3 flex flex-col items-start justify-center pl-[50px] space-y-4 ${isVisible ? 'fade-in-left' : 'opacity-0'}`}>
                     <h1 className='text-2xl font-semibold text-mainBlack dark:text-white'>
                         Hello, I'm <span className='text-mainBlue'>Marshall.</span>
                     </h1>
