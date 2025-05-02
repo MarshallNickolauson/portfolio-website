@@ -10,13 +10,11 @@ const HeroSection = () => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-        );
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setIsVisible(true);
+            }
+        });
 
         if (containerRef.current) observer.observe(containerRef.current);
         return () => observer.disconnect();
@@ -42,16 +40,16 @@ const HeroSection = () => {
                     </h1>
                     <div className='flex flex-col text-md space-y-4 text-mainGray dark:text-white'>
                         <p>
-                            I'm a passionate Full Stack Developer who loves making elegant, efficient, and user-friendly web applications. With over 3 years of hands-on experience, I've worked on a
-                            range of projects — from personal experiments to complex container-based applications.
+                            My full name is Marshall David Nickolauson, and I’m a passionate Full Stack Developer with a love for problem-solving and creating elegant, efficient, and user-friendly web
+                            applications.
                         </p>
                         <p>
-                            My journey in web development started with a curiosity about how technology can solve real-world problems. That curiosity drove me to pursue a degree in Computer Science,
-                            where I'm currently building a strong foundation in programming principles and software architecture.
+                            My journey into web development began with my love for God and a desire to pursue a career that would allow me to serve Him without facing financial insecurity. I believe
+                            it was through His guidance that I discovered the incredible world of technology and its power to solve real-world problems. I've always enjoyed problem-solving and
+                            striving for precision, and when I discovered how precise coding needs to be, I fell in love with the continuous learning process it offers.
                         </p>
                         <p>
-                            What excites me most about development is the constant learning and problem-solving. Every project brings new challenges and opportunities to grow, and I thrive in this
-                            ever-evolving landscape of web technologies.
+                            What excites me now is the balance of art and science {'('}and still envisioning these skills serving God!{')'} Every project brings new challenges and opportunities for growth, and that's what makes programming so much fun.
                         </p>
                         <div className='flex space-x-3 pt-2'>
                             <button
