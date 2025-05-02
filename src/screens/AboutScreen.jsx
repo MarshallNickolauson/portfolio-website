@@ -6,6 +6,7 @@ import SoftSkillsSection from '../components/aboutscreen/SoftSkillsSection';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import EducationSection from '../components/aboutscreen/EducationSection';
+import DevApproachSection from '../components/aboutscreen/DevApproachSection';
 
 const AboutScreen = () => {
     const { pathname } = useLocation();
@@ -27,6 +28,7 @@ const AboutScreen = () => {
             <MyJourneySection />
             <SoftSkillsSection />
             <EducationSection />
+            <DevApproachSection />
             <Footer />
         </>
     );

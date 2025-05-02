@@ -90,12 +90,8 @@ html {
     animation: drawDown 0.75s ease-out forwards;
 }
 
-/* ######### */
-
-.marquee-track {
-    display: flex;
-    width: max-content;
-    animation: scroll-left 45s linear infinite;
+.soft-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes scroll-left {
@@ -106,4 +102,10 @@ html {
     100% {
         transform: translateX(-50%);
     }
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 45s linear infinite;
 }

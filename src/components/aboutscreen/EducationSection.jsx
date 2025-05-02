@@ -213,7 +213,7 @@ const EducationSection = () => {
     const getAnimationClass = (sectionKey) => (visibleSections[sectionKey] ? 'fade-in-bottom opacity-100' : 'opacity-0');
 
     const getStyle = (index) => ({
-        animationDelay: `${0.1 + index * 0.3}s`,
+        animationDelay: `${0.1 + index * 0.2}s`,
     });
 
     return (
