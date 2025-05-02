@@ -33,32 +33,32 @@ const TestimonialsSection = () => {
     ];
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.4 }
-        );
+        const handleReady = () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                },
+                { threshold: 0.4 }
+            );
 
-        if (titleRef.current) observer.observe(titleRef.current);
-        return () => observer.disconnect();
+            if (titleRef.current) observer.observe(titleRef.current);
+        };
+
+        window.addEventListener('scroll-reset-done', handleReady);
+
+        return () => {
+            window.removeEventListener('scroll-reset-done', handleReady);
+        };
     }, []);
 
     return (
         <section className='bg-mainBlueLight dark:bg-white py-6'>
-            <h2
-                ref={titleRef}
-                className={`text-3xl text-mainBlack font-semibold text-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
-                style={{ animationDelay: '0.1s' }}
-            >
+            <h2 ref={titleRef} className={`text-3xl text-mainBlack font-semibold text-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 What <span className='text-red-500'>Real</span> People Say
             </h2>
-            <p
-                className={`text-base text-md text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
-                style={{ animationDelay: '0.3s' }}
-            >
+            <p className={`text-base text-md text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
                 Here's what some people have said so far about my work.
             </p>
 
@@ -66,9 +66,7 @@ const TestimonialsSection = () => {
                 {testimonials.map((testimonial, index) => (
                     <div
                         key={testimonial.id}
-                        className={`bg-white shadow-md rounded-xl border border-[#e0ecff] w-[270px] p-6 flex flex-col space-y-4 ${
-                            isVisible ? 'fade-in-bottom' : 'opacity-0'
-                        }`}
+                        className={`bg-white shadow-md rounded-xl border border-[#e0ecff] w-[270px] p-6 flex flex-col space-y-4 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                         style={{ animationDelay: `${0.3 + index * 0.2}s` }}
                     >
                         <div className='flex items-center space-x-3'>
@@ -79,15 +77,8 @@ const TestimonialsSection = () => {
                             </div>
                         </div>
                         <hr className='border-t border-mainBlueLight' />
-                        <p className='text-sm italic text-mainGrayDark leading-relaxed'>
-                            “{testimonial.feedback}”
-                        </p>
-                        <a
-                            href={testimonial.linkedin}
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className='text-mainBlue font-semibold text-sm flex items-center space-x-1'
-                        >
+                        <p className='text-sm italic text-mainGrayDark leading-relaxed'>“{testimonial.feedback}”</p>
+                        <a href={testimonial.linkedin} target='_blank' rel='noopener noreferrer' className='text-mainBlue font-semibold text-sm flex items-center space-x-1'>
                             <FaLinkedin /> <span>LinkedIn</span>
                         </a>
                     </div>

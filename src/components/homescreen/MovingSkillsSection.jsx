@@ -7,17 +7,22 @@ const MovingSkillsSection = () => {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    containerRef.current.classList.add('fade-in');
-                }
-            },
-            { threshold: 0.4 }
-        );
+        const handleReady = () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        containerRef.current.classList.add('fade-in');
+                    }
+                },
+                { threshold: 0.4 }
+            );
 
-        if (containerRef.current) observer.observe(containerRef.current);
-        return () => observer.disconnect();
+            if (containerRef.current) observer.observe(containerRef.current);
+        };
+
+        window.addEventListener('scroll-reset-done', handleReady);
+
+        return () => window.removeEventListener('scroll-reset-done', handleReady);
     }, []);
 
     return (

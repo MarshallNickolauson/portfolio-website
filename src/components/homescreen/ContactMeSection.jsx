@@ -13,57 +13,41 @@ const ContactMeSection = () => {
     const buttonRef = useRef(null);
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.4 }
-        );
+        const handleReady = () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.target === titleRef.current && entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                    if (entry.target === buttonRef.current && entry.isIntersecting) {
+                        setIsButtonVisible(true);
+                    }
+                },
+                { threshold: 0.4 }
+            );
 
-        if (titleRef.current) observer.observe(titleRef.current);
-        return () => observer.disconnect();
-    }, []);
+            if (titleRef.current) observer.observe(titleRef.current);
+            if (buttonRef.current) observer.observe(buttonRef.current);
+        };
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    setIsButtonVisible(true);
-                }
-            },
-            { threshold: 0.4 }
-        );
+        window.addEventListener('scroll-reset-done', handleReady);
 
-        if (buttonRef.current) observer.observe(buttonRef.current);
-        return () => observer.disconnect();
+        return () => window.removeEventListener('scroll-reset-done', handleReady);
     }, []);
 
     return (
         <section className='py-12 text-center px-4 bg-mainBlueLight dark:bg-white'>
-            <h2
-                ref={titleRef}
-                className={`text-3xl font-semibold text-mainBlack ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
-                style={{ animationDelay: '0.1s' }}
-            >
+            <h2 ref={titleRef} className={`text-3xl font-semibold text-mainBlack ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 Let's <span className='text-red-500'>Connect</span>
             </h2>
 
-            <p
-                ref={paragraphRef}
-                className={`text-mainGray text-base max-w-xl mx-auto mt-4 leading-relaxed ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
-                style={{ animationDelay: '0.3s' }}
-            >
-                I'm a big fan of good conversations, cool projects, and curious people.<br />If you've got an idea, a question, or just want to chat - send it my way.
+            <p ref={paragraphRef} className={`text-mainGray text-base max-w-xl mx-auto mt-4 leading-relaxed ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+                I'm a big fan of good conversations, cool projects, and curious people.
+                <br />
+                If you've got an idea, a question, or just want to chat - send it my way.
             </p>
 
-            <div
-                ref={buttonRef}
-                className={`mt-6 flex justify-center ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`}
-                style={{ animationDelay: '0.3s' }}
-            >
+            <div ref={buttonRef} className={`mt-6 flex justify-center ${isButtonVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
                 <button
                     className='text-white bg-mainBlue border border-mainBlue px-6 py-3 rounded-md text-base font-medium hover:bg-transparent hover:text-mainBlue transition-all duration-300 ease-in-out flex items-center'
                     onClick={() => navigate('/contact')}
@@ -73,6 +57,6 @@ const ContactMeSection = () => {
             </div>
         </section>
     );
-}
+};
 
-export default ContactMeSection
+export default ContactMeSection;

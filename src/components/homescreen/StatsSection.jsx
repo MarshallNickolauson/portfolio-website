@@ -12,20 +12,25 @@ const StatsSection = () => {
     const containerRef = useRef(null);
     const hasAnimated = useRef(false);
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && !hasAnimated.current) {
-                    hasAnimated.current = true;
+        useEffect(() => {
+            const handleReady = () => {
+                const observer = new IntersectionObserver(
+                    ([entry]) => {
+                        if (entry.isIntersecting) {
+                            hasAnimated.current = true;
                     animateCounts();
-                }
-            },
-            { threshold: 0.4 }
-        );
-
-        if (containerRef.current) observer.observe(containerRef.current);
-        return () => observer.disconnect();
-    }, []);
+                        }
+                    },
+                    { threshold: 0.4 }
+                );
+    
+                if (containerRef.current) observer.observe(containerRef.current);
+            };
+    
+            window.addEventListener('scroll-reset-done', handleReady);
+    
+            return () => window.removeEventListener('scroll-reset-done', handleReady);
+        }, []);
 
     const animateCounts = () => {
         const duration = 2000;

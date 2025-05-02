@@ -46,32 +46,26 @@ const FeaturedProjects = () => {
     ];
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.4 }
-        );
+        const handleReady = () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.target === titleRef.current && entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                    if (entry.target === buttonRef.current && entry.isIntersecting) {
+                        setIsButtonVisible(true);
+                    }
+                },
+                { threshold: 0.4 }
+            );
 
-        if (titleRef.current) observer.observe(titleRef.current);
-        return () => observer.disconnect();
-    }, []);
+            if (titleRef.current) observer.observe(titleRef.current);
+            if (buttonRef.current) observer.observe(buttonRef.current);
+        };
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    setIsButtonVisible(true);
-                }
-            },
-            { threshold: 0.4 }
-        );
+        window.addEventListener('scroll-reset-done', handleReady);
 
-        if (buttonRef.current) observer.observe(buttonRef.current);
-        return () => observer.disconnect();
+        return () => window.removeEventListener('scroll-reset-done', handleReady);
     }, []);
 
     return (
@@ -109,10 +103,16 @@ const FeaturedProjects = () => {
                         </div>
 
                         <div className='flex space-x-2 pt-2 px-2 pb-3'>
-                            <a href={project.liveDemo} className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-4 py-2 rounded-md hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition duration-200 text-sm'>
+                            <a
+                                href={project.liveDemo}
+                                className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-4 py-2 rounded-md hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition duration-200 text-sm'
+                            >
                                 Live Demo
                             </a>
-                            <a href={project.github} className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-4 py-2 rounded-md hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition duration-200 text-sm'>
+                            <a
+                                href={project.github}
+                                className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-4 py-2 rounded-md hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition duration-200 text-sm'
+                            >
                                 GitHub
                             </a>
                         </div>
