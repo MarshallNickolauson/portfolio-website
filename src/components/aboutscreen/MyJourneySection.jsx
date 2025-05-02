@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const JourneySection = () => {
     const journeyData = [
@@ -47,9 +47,9 @@ const JourneySection = () => {
     }, []);
 
     return (
-        <section className='bg-white dark:bg-darkMainBlue pt-28 px-6'>
+        <section className='bg-white dark:bg-darkMainBlueLight px-6'>
             <h2
-                className={`text-3xl md:text-4xl font-semibold text-center mb-12 text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                className={`text-3xl md:text-4xl pt-10 font-semibold text-center mb-8 text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 style={{ animationDelay: `0.2s` }}
             >
                 My Journey
@@ -63,7 +63,7 @@ const JourneySection = () => {
                             <div
                                 className={`absolute left-[10px] top-4 w-px bg-mainBlue/60 z-0 transform -translate-x-1/2 ${isVisible ? 'draw-down' : 'opacity-0'}`}
                                 style={{
-                                    animationDelay: `${1.5 + index * 0.5}s`,
+                                    animationDelay: `${1.3 + index * 0.5}s`,
                                     animationFillMode: 'forwards',
                                 }}
                             />

@@ -21,7 +21,7 @@ const HeroSection = () => {
     }, []);
 
     return (
-        <section ref={containerRef} className='pt-[60px] bg-white dark:bg-darkMainBlue h-[580px] w-full'>
+        <section ref={containerRef} className='pt-[60px] bg-white dark:bg-darkMainBlue h-[670px] w-full/'>
             <div className='flex justify-center pt-8'>
                 <h1
                     className={`text-4xl font-semibold bg-gradient-to-r from-mainBlue/80 to-mainBlueDark bg-clip-text text-transparent ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
