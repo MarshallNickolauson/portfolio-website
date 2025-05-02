@@ -56,7 +56,7 @@ const ContactMeSection = () => {
                 className={`text-mainGray text-base max-w-xl mx-auto mt-4 leading-relaxed ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 style={{ animationDelay: '0.3s' }}
             >
-                I am a passionate developer with 3+ years of experience building web applications that would solve real world problems. My approach combines technical expertise with a deep understanding of the design of user needs and business objectives. I believe in making solutions that aren’t just functional, but also intuitive, fast, and scalable.
+                I'm a big fan of good conversations, cool projects, and curious people.<br />If you've got an idea, a question, or just want to chat - send it my way.
             </p>
 
             <div

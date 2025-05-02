@@ -44,10 +44,10 @@ const SkillsSection = () => {
 
     return (
         <section className='pb-10 bg-white dark:bg-darkMainBlue'>
-            <h2 ref={titleRef} className={`text-3xl text-mainBlack font-semibold text-center pt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+            <h2 ref={titleRef} className={`text-3xl text-mainBlack dark:text-white font-semibold text-center pt-8 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 How I Work
             </h2>
-            <p ref={subtitleRef} className={`text-md text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
+            <p ref={subtitleRef} className={`text-md text-mainGray dark:text-white/60 text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
                 A few of the most important skills to turn challenges into opportunities.
             </p>
             <div className='mt-8'>
