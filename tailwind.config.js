@@ -11,6 +11,7 @@ export default {
                 mainGray: '#6F7C98',
                 mainGrayDark: '#676B74',
                 mainBlack: '#303030',
+                darkMainBlue: '#020817',
             },
             fontFamily: {
                 roboto: ['Roboto', 'sans-serif'],
