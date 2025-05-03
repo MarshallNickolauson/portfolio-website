@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import EducationSection from '../components/aboutscreen/EducationSection';
 import DevApproachSection from '../components/aboutscreen/DevApproachSection';
+import ContactMeSection from '../components/aboutscreen/ContactMeSection';
 
 const AboutScreen = () => {
     const { pathname } = useLocation();
@@ -29,6 +30,7 @@ const AboutScreen = () => {
             <SoftSkillsSection />
             <EducationSection />
             <DevApproachSection />
+            <ContactMeSection />
             <Footer />
         </>
     );

@@ -41,7 +41,7 @@ const DevApproachSection = () => {
     }, []);
 
     return (
-        <section className='bg-white dark:bg-darkMainBlue px-6' ref={containerRef}>
+        <section className='bg-white dark:bg-darkMainBlue px-6 pb-10' ref={containerRef}>
             <h2
                 className={`text-3xl md:text-4xl pt-10 font-semibold text-center mb-8 text-mainBlack dark:text-white ${
                     isVisible ? 'fade-in-bottom' : 'opacity-0'
