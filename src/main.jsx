@@ -8,6 +8,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import AboutScreen from './screens/AboutScreen';
 import SkillsScreen from './screens/SkillsScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
+import ContactScreen from './screens/ContactScreen';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
             <Route path='/about' element={<AboutScreen />} />
             <Route path='/skills' element={<SkillsScreen />} />
             <Route path='/projects' element={<ProjectsScreen />} />
+            <Route path='/contact' element={<ContactScreen />} />
             <Route path='*' element={<NotFoundScreen />} />
         </>
     ),
