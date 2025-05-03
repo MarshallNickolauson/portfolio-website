@@ -24,6 +24,7 @@ const TechStackSection = () => {
                 { name: 'REST', level: 95, description: 'Standardized APIs and HTTP methods' },
                 { name: 'Flask', level: 85, description: 'Lightweight API setup and routing' },
                 { name: 'Spring Boot', level: 82, description: 'Dependency injection and RESTful APIs in Java' },
+                { name: 'Python', level: 93, description: 'Scripting, data analysis, and web development' },
             ],
         },
         {

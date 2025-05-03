@@ -1,11 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import pfp from '../../assets/img/pfp.png';
-import { FaArrowRight } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
-    const navigate = useNavigate();
-
     const [isVisible, setIsVisible] = useState(false);
     const containerRef = useRef(null);
 
