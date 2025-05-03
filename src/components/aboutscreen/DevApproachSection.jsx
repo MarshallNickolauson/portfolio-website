@@ -51,11 +51,11 @@ const DevApproachSection = () => {
                 My Approach to Development
             </h2>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center max-w-[1200px] mx-auto'>
                 {cardData.map((card, index) => (
                     <div
                         key={index}
-                        className={`bg-white dark:bg-darkMainBlueLight rounded-lg p-6 border-[1px] border-mainBlue ${
+                        className={`bg-white dark:bg-darkMainBlueLight rounded-lg p-6 border-[1px] border-mainBlue/50 ${
                             isVisible ? 'fade-in-bottom' : 'opacity-0'
                         }`}
                         style={{ animationDelay: `${0.4 + index * 0.1}s` }}

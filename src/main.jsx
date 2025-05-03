@@ -6,12 +6,14 @@ import './index.css';
 import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import AboutScreen from './screens/AboutScreen';
+import SkillsScreen from './screens/SkillsScreen';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <>
             <Route path='/' element={<HomeScreen />} />
             <Route path='/about' element={<AboutScreen />} />
+            <Route path='/skills' element={<SkillsScreen />} />
             <Route path='*' element={<NotFoundScreen />} />
         </>
     ),
