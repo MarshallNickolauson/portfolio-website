@@ -83,7 +83,7 @@ const SkillsSection = () => {
                                 {card.skills.map((skill, i) => (
                                     <span
                                         key={i}
-                                        className='bg-mainGray/20 dark:bg-white/10 text-mainBlack dark:text-white text-xs px-3 py-1 rounded-full border border-mainBlack/30 dark:border-white/20'
+                                        className='bg-transparent text-mainBlack dark:text-white text-xs px-3 py-1 rounded-full border border-mainBlack/30 dark:border-white/20'
                                     >
                                         {skill}
                                     </span>
