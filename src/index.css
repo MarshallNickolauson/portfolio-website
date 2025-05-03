@@ -63,6 +63,18 @@ html {
     }
 }
 
+@keyframes dropDown {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .fade-in-left {
     opacity: 0;
     animation: fadeInLeft 0.5s ease-out forwards;
@@ -89,6 +101,11 @@ html {
 
 .draw-down {
     animation: drawDown 0.75s ease-out forwards;
+}
+
+.drop-down {
+    opacity: 0;
+    animation: dropDown 0.75s ease-out forwards;
 }
 
 @keyframes scroll-left {

@@ -16,7 +16,7 @@ const ProjectsSection = () => {
                                 key={type}
                                 onClick={() => setActiveButton(type)}
                                 className={`px-4 py-2 rounded-md border-[1px] border-mainBlue transition-all duration-200
-                                    ${activeButton === type ? 'bg-mainBlue text-white' : 'bg-white text-mainBlue'}
+                                    ${activeButton === type ? 'bg-mainBlue text-white' : 'bg-transparent text-mainBlue'}
                                     `}
                             >
                                 {type}

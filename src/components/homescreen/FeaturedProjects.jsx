@@ -75,7 +75,7 @@ const FeaturedProjects = () => {
             </h2>
 
             <p ref={subtitleRef} className={`text-md text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
-                A selection of my best work that demonstrates my skills and expertise in creating impactful digital solutions.
+                A selection of my best work that demonstrates my skills and expertise in making impactful digital solutions.
             </p>
 
             <div ref={projectsRef} className='flex items-center justify-center mt-8 space-x-6'>

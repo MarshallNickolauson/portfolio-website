@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import ContactMeSection from '../components/projectsscreen/ContactMeSection';
 import HeroSection from '../components/projectsscreen/HeroSection';
 import ProjectsSection from '../components/projectsscreen/ProjectsSection';
-import ContactMeSection from '../components/projectsscreen/ContactMeSection';
 
 const ProjectsScreen = () => {
     const { pathname } = useLocation();
@@ -21,11 +19,9 @@ const ProjectsScreen = () => {
 
     return (
         <>
-            <Navbar />
             <HeroSection />
             <ProjectsSection />
             <ContactMeSection />
-            <Footer />
         </>
     );
 };

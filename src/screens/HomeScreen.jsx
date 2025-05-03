@@ -1,5 +1,5 @@
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Footer from '../components/Footer';
 import AboutMeSection from '../components/homescreen/AboutMeSection';
 import ContactMeSection from '../components/homescreen/ContactMeSection';
 import FeaturedProjects from '../components/homescreen/FeaturedProjects';
@@ -8,8 +8,6 @@ import MovingSkillsSection from '../components/homescreen/MovingSkillsSection';
 import SkillsSection from '../components/homescreen/SkillsSection';
 import StatsSection from '../components/homescreen/StatsSection';
 import TestimonialsSection from '../components/homescreen/TestimonialsSection';
-import Navbar from '../components/Navbar';
-import { useEffect } from 'react';
 
 function App() {
     const { pathname } = useLocation();
@@ -26,7 +24,6 @@ function App() {
 
     return (
         <div>
-            <Navbar />
             <HeroSection />
             <StatsSection />
             <MovingSkillsSection />
@@ -35,7 +32,6 @@ function App() {
             <TestimonialsSection />
             <AboutMeSection />
             <ContactMeSection />
-            <Footer />
         </div>
     );
 }

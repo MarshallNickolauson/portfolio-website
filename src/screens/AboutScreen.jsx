@@ -23,13 +23,11 @@ const AboutScreen = () => {
 
     return (
         <>
-            <Navbar />
             <HeroSection />
             <MyJourneySection />
             <SoftSkillsSection />
             <DevApproachSection />
             <ContactMeSection />
-            <Footer />
         </>
     );
 };

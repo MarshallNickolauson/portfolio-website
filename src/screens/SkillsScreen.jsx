@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import EducationSection from '../components/skillsscreen/EducationSection';
 import HeroSection from '../components/skillsscreen/HeroSection';
 import TechStackSection from '../components/skillsscreen/TechStackSection';
-import EducationSection from '../components/skillsscreen/EducationSection';
 
 const SkillsScreen = () => {
     const { pathname } = useLocation();
@@ -21,11 +19,9 @@ const SkillsScreen = () => {
 
     return (
         <>
-            <Navbar />
             <HeroSection />
             <TechStackSection />
             <EducationSection />
-            <Footer />
         </>
     );
 };

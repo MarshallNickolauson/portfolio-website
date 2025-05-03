@@ -9,17 +9,18 @@ import AboutScreen from './screens/AboutScreen';
 import SkillsScreen from './screens/SkillsScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
 import ContactScreen from './screens/ContactScreen';
+import MainLayout from './components/MainLayout';
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <>
-            <Route path='/' element={<HomeScreen />} />
+        <Route path='/' element={<MainLayout />}>
+            <Route index element={<HomeScreen />} />
             <Route path='/about' element={<AboutScreen />} />
             <Route path='/skills' element={<SkillsScreen />} />
             <Route path='/projects' element={<ProjectsScreen />} />
             <Route path='/contact' element={<ContactScreen />} />
             <Route path='*' element={<NotFoundScreen />} />
-        </>
+        </Route>
     ),
     { basename: '/portfolio-website' }
 );
