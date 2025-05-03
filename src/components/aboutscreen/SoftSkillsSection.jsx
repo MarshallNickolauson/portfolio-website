@@ -39,7 +39,7 @@ const SoftSkillsSection = () => {
     }, []);
 
     return (
-        <section className='bg-white dark:bg-darkMainBlue pt-8 px-6' ref={containerRef}>
+        <section className='bg-white dark:bg-darkMainBlue py-4 px-6' ref={containerRef}>
             <h2 className={`text-3xl md:text-4xl font-semibold text-center mb-8 text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: `0.2s` }}>
                 Professional Skills
             </h2>

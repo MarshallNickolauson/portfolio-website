@@ -5,7 +5,6 @@ import MyJourneySection from '../components/aboutscreen/MyJourneySection';
 import SoftSkillsSection from '../components/aboutscreen/SoftSkillsSection';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import EducationSection from '../components/aboutscreen/EducationSection';
 import DevApproachSection from '../components/aboutscreen/DevApproachSection';
 import ContactMeSection from '../components/aboutscreen/ContactMeSection';
 
@@ -17,7 +16,7 @@ const AboutScreen = () => {
 
         const timer = setTimeout(() => {
             window.dispatchEvent(new Event('about-scroll-reset-done'));
-        }, 200);
+        }, 100);
 
         return () => clearTimeout(timer);
     }, [pathname]);
@@ -28,7 +27,6 @@ const AboutScreen = () => {
             <HeroSection />
             <MyJourneySection />
             <SoftSkillsSection />
-            <EducationSection />
             <DevApproachSection />
             <ContactMeSection />
             <Footer />

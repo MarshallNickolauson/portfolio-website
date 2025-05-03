@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import HeroSection from '../components/skillsscreen/HeroSection';
 import TechStackSection from '../components/skillsscreen/TechStackSection';
+import EducationSection from '../components/skillsscreen/EducationSection';
 
 const SkillsScreen = () => {
     const { pathname } = useLocation();
@@ -23,6 +24,7 @@ const SkillsScreen = () => {
             <Navbar />
             <HeroSection />
             <TechStackSection />
+            <EducationSection />
             <Footer />
         </>
     );

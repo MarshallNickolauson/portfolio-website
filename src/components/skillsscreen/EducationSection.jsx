@@ -205,9 +205,9 @@ const EducationSection = () => {
             });
         };
 
-        window.addEventListener('about-scroll-reset-done', handleReady);
+        window.addEventListener('skills-scroll-reset-done', handleReady);
 
-        return () => window.removeEventListener('about-scroll-reset-done', handleReady);
+        return () => window.removeEventListener('skills-scroll-reset-done', handleReady);
     }, [visibleSections]);
 
     const getAnimationClass = (sectionKey) => (visibleSections[sectionKey] ? 'fade-in-bottom opacity-100' : 'opacity-0');
@@ -219,7 +219,7 @@ const EducationSection = () => {
     return (
         <section className='bg-white dark:bg-darkMainBlueLight px-6'>
             {/* Title */}
-            <h2 ref={titleRef} className={`text-3xl md:text-4xl pt-10 font-semibold text-center text-mainBlack dark:text-white ${getAnimationClass('title')}`} style={getStyle(0)}>
+            <h2 ref={titleRef} className={`text-3xl md:text-4xl pt-3 font-semibold text-center text-mainBlack dark:text-white ${getAnimationClass('title')}`} style={getStyle(0)}>
                 Education
             </h2>
             <p className={`text-md text-mainBlack dark:text-white text-center pt-2 ${getAnimationClass('title')}`} style={getStyle(1)}>

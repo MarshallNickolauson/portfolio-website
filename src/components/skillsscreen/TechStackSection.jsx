@@ -115,7 +115,7 @@ const TechStackSection = () => {
             </section>
 
             {/* Detailed Skills */}
-            <section className='bg-white dark:bg-darkMainBlue px-6 pb-10' ref={detailedTechStackContainerRef}>
+            <section className={`bg-white dark:bg-darkMainBlue px-6 pb-6 animate-fade-in`} style={{ animationDelay: '1s' }} ref={detailedTechStackContainerRef}>
                 <h2 className='text-2xl pt-10 font-semibold text-center mb-8 text-mainBlack dark:text-white'>Detailed Skills</h2>
 
                 <div className='text-center mx-auto flex bg-gray-300 p-1 rounded-md w-fit mb-8'>
@@ -131,7 +131,7 @@ const TechStackSection = () => {
                     ))}
                 </div>
 
-                <div className='max-w-[800px] mx-auto bg-white dark:bg-darkMainBlueLight px-4'>
+                <div className='max-w-[800px] mx-auto bg-white dark:bg-darkMainBlue px-4'>
                     <div key={activeTab}>
                         {cardData
                             .find((card) => card.title === activeTab)

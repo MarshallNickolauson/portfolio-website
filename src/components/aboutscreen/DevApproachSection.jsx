@@ -1,26 +1,30 @@
 import { useEffect, useRef, useState } from 'react';
-
-const cardData = [
-    {
-        title: 'Clean Code Matters',
-        content:
-            "I believe in writing clean, maintainable code that's easy to understand and extend. Good code should read like a well-written story. This approach reduces bugs, makes collaboration easier, and ensures a project can evolve over time.",
-    },
-    {
-        title: 'Always Learning',
-        content:
-            "The tech world evolves rapidly, and I'm committed to continuous learning and improvement. I dedicate time each week to explore new technologies and techniques. This ensures I can always stay ahead of the curve.",
-    },
-    {
-        title: 'User-First Approach',
-        content:
-            "There's no need to reinvent the wheel when it comes to clean, user-friendly UI. I enjoy prioritizing user experience and accessibility in everything I build. Technical excellence means nothing if the end product doesn't serve users well.",
-    },
-];
+import { FaArrowRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const DevApproachSection = () => {
+    const navigate = useNavigate();
+    
     const [isVisible, setIsVisible] = useState(false);
     const containerRef = useRef(null);
+
+    const cardData = [
+        {
+            title: 'Clean Code Matters',
+            content:
+                "I believe in writing clean, maintainable code that's easy to understand and extend. Good code should read like a well-written story. This approach reduces bugs, makes collaboration easier, and ensures a project can evolve over time.",
+        },
+        {
+            title: 'Always Learning',
+            content:
+                "The tech world evolves rapidly, and I'm committed to continuous learning and improvement. I dedicate time each week to explore new technologies and techniques. This ensures I can always stay ahead of the curve.",
+        },
+        {
+            title: 'User-First Approach',
+            content:
+                "There's no need to reinvent the wheel when it comes to clean, user-friendly UI. I enjoy prioritizing user experience and accessibility in everything I build. Technical excellence means nothing if the end product doesn't serve users well.",
+        },
+    ];
 
     useEffect(() => {
         const handleReady = () => {
@@ -42,12 +46,7 @@ const DevApproachSection = () => {
 
     return (
         <section className='bg-white dark:bg-darkMainBlue px-6 pb-10' ref={containerRef}>
-            <h2
-                className={`text-3xl md:text-4xl pt-10 font-semibold text-center mb-8 text-mainBlack dark:text-white ${
-                    isVisible ? 'fade-in-bottom' : 'opacity-0'
-                }`}
-                style={{ animationDelay: '0.2s' }}
-            >
+            <h2 className={`text-3xl md:text-4xl pt-10 font-semibold text-center mb-8 text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
                 My Approach to Development
             </h2>
 
@@ -55,15 +54,21 @@ const DevApproachSection = () => {
                 {cardData.map((card, index) => (
                     <div
                         key={index}
-                        className={`bg-white dark:bg-darkMainBlueLight rounded-lg p-6 border-[1px] border-mainBlue/50 ${
-                            isVisible ? 'fade-in-bottom' : 'opacity-0'
-                        }`}
+                        className={`bg-white dark:bg-darkMainBlueLight rounded-lg p-6 border-[1px] border-mainBlue/50 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                         style={{ animationDelay: `${0.4 + index * 0.1}s` }}
                     >
                         <h3 className='text-xl font-semibold text-mainBlack dark:text-white mb-4'>{card.title}</h3>
                         <p className='text-md text-mainGray dark:text-white'>{card.content}</p>
                     </div>
                 ))}
+            </div>
+            <div className={`mt-10 flex justify-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}>
+                <button
+                    className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition flex items-center'
+                    onClick={() => navigate('/skills')}
+                >
+                    Explore Tech Skills <FaArrowRight className='ml-2' />
+                </button>
             </div>
         </section>
     );
