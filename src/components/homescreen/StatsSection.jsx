@@ -12,25 +12,25 @@ const StatsSection = () => {
     const containerRef = useRef(null);
     const hasAnimated = useRef(false);
 
-        useEffect(() => {
-            const handleReady = () => {
-                const observer = new IntersectionObserver(
-                    ([entry]) => {
-                        if (entry.isIntersecting) {
-                            hasAnimated.current = true;
-                    animateCounts();
-                        }
-                    },
-                    { threshold: 0.4 }
-                );
-    
-                if (containerRef.current) observer.observe(containerRef.current);
-            };
-    
-            window.addEventListener('scroll-reset-done', handleReady);
-    
-            return () => window.removeEventListener('scroll-reset-done', handleReady);
-        }, []);
+    useEffect(() => {
+        const handleReady = () => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        hasAnimated.current = true;
+                        animateCounts();
+                    }
+                },
+                { threshold: 0.4 }
+            );
+
+            if (containerRef.current) observer.observe(containerRef.current);
+        };
+
+        window.addEventListener('scroll-reset-done', handleReady);
+
+        return () => window.removeEventListener('scroll-reset-done', handleReady);
+    }, []);
 
     const animateCounts = () => {
         const duration = 2000;
@@ -40,13 +40,7 @@ const StatsSection = () => {
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
 
-            setCounts(
-                stats.map((stat) =>
-                    stat.number === 1000
-                        ? Math.floor(progress * 1000)
-                        : Math.floor(progress * stat.number)
-                )
-            );
+            setCounts(stats.map((stat) => (stat.number === 1000 ? Math.floor(progress * 1000) : Math.floor(progress * stat.number))));
 
             if (progress < 1) requestAnimationFrame(update);
         };
@@ -55,27 +49,18 @@ const StatsSection = () => {
     };
 
     return (
-        <section
-            ref={containerRef}
-            className='bg-mainBlueLight dark:bg-white h-[180px] w-full flex items-center justify-center'
-        >
+        <section ref={containerRef} className='bg-mainBlueLight dark:bg-mainGray/10 h-[180px] w-full flex items-center justify-center'>
             <div className='flex space-x-20'>
                 {stats.map((stat, index) => (
                     <div
                         key={index}
                         className={`flex flex-col items-center opacity-0 transform translate-y-10 transition-all duration-500 delay-${index * 200}`}
                         style={{
-                            animation: hasAnimated.current
-                                ? `fadeUp 0.5s ease-out ${index * 0.2}s forwards`
-                                : 'none',
+                            animation: hasAnimated.current ? `fadeUp 0.5s ease-out ${index * 0.2}s forwards` : 'none',
                         }}
                     >
-                        <h1 className='text-[2.5rem] font-semibold text-mainBlueDark text-center'>
-                            {counts[index]}+
-                        </h1>
-                        <p className='text-mainGrayDark text-[1.1rem] font-medium text-center'>
-                            {stat.label}
-                        </p>
+                        <h1 className='text-[2.5rem] font-semibold text-mainBlueDark text-center'>{counts[index]}+</h1>
+                        <p className='text-mainGrayDark text-[1.1rem] font-medium text-center'>{stat.label}</p>
                     </div>
                 ))}
             </div>

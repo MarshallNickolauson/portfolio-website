@@ -36,7 +36,7 @@ const AboutMeSection = () => {
     }, []);
 
     return (
-        <section className='py-12 text-center px-4 bg-white dark:bg-darkMainBlue'>
+        <section className='py-12 text-center px-4 bg-white dark:bg-darkMainBlueLight'>
             <h2 ref={titleRef} className={`text-3xl font-semibold text-mainBlack dark:text-white ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
                 About Me
             </h2>
