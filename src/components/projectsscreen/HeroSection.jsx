@@ -35,7 +35,7 @@ const HeroSection = () => {
                     My Projects
                 </h1>
                 <p
-                    className={`text-md text-mainBlack dark:text-white text-center max-w-3xl flex justify-center mx-auto pt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                    className={`text-md text-mainBlack dark:text-white text-center max-w-3xl flex justify-center mx-auto pt-2 ${isVisible ? 'fade-in' : 'opacity-0'}`}
                     style={{ animationDelay: '0.2s' }}
                 >
                     A collection of my personal projects, course labs, and experiments.

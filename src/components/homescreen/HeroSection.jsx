@@ -43,9 +43,9 @@ const HeroSection = () => {
                         <br />
                         lightning-fast web apps using the MERN stack.
                     </p>
-                    <div className={`flex space-x-4 mt-5 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}>
+                    <div className={`flex space-x-4 mt-5`}>
                         <button
-                            className='bg-mainBlue text-white px-[20px] py-3 rounded-md hover:bg-transparent border-[1px] border-mainBlue hover:text-mainBlue dark:hover:text-white dark:hover:border-white transition-all duration-200'
+                            className={`bg-mainBlue text-white px-[20px] py-3 rounded-md hover:bg-transparent border-[1px] border-mainBlue hover:text-mainBlue dark:hover:text-white dark:hover:border-white transition-colors duration-200 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}
                             onClick={() => navigate('/projects')}
                         >
                             <h1 className='flex items-center justify-center'>
@@ -53,7 +53,7 @@ const HeroSection = () => {
                             </h1>
                         </button>
                         <button
-                            className='bg-transparent px-[35px] text-mainBlue py-3 rounded-md border border-mainBlue dark:border-white dark:text-white hover:bg-mainBlue dark:hover:bg-transparent hover:text-white transition duration-200'
+                            className={`bg-transparent px-[35px] text-mainBlue py-3 rounded-md border border-mainBlue dark:border-white dark:text-white hover:bg-mainBlue dark:hover:bg-transparent hover:text-white transition-colors duration-200 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}
                             onClick={() => navigate('/contact')}
                         >
                             <h1 className='flex items-center justify-center'>Contact Me</h1>

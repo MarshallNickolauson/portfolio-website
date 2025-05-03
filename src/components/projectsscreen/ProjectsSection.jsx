@@ -8,6 +8,7 @@ const ProjectsSection = () => {
 
     return (
         <section className='pb-8 bg-white dark:bg-darkMainBlue pt-5'>
+            {/* Buttons */}
             <div className='container max-w-[1200px] mx-auto px-4'>
                 <div className='animate-fade-in' style={{ animationDelay: '0.3s' }}>
                     <div className='flex justify-center mb-8 space-x-2'>
@@ -25,6 +26,7 @@ const ProjectsSection = () => {
                     </div>
                 </div>
 
+                {/* Projects */}
                 <div className='animate-fade-in'>
                     <div key={activeButton} className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
                         {projects

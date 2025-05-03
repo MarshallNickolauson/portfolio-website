@@ -35,7 +35,7 @@ const HeroSection = () => {
                     Get in Touch
                 </h1>
                 <p
-                    className={`text-md text-mainBlack dark:text-white text-center max-w-3xl flex justify-center mx-auto pt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                    className={`text-md text-mainBlack dark:text-white text-center max-w-3xl flex justify-center mx-auto pt-2 ${isVisible ? 'fade-in' : 'opacity-0'}`}
                     style={{ animationDelay: '0.2s' }}
                 >
                     Want to talk, collaborate on a project, or hire? I'd love to hear from you.

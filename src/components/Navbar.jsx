@@ -33,9 +33,9 @@ const Navbar = () => {
                         })}
                         <div className='drop-down' style={{ animationDelay: '0.6s' }}>
                             {darkMode ? (
-                                <MdOutlineWbSunny className='text-white cursor-pointer hover:text-mainBlue' size={20} onClick={toggleTheme} />
+                                <MdOutlineWbSunny className='text-white cursor-pointer hover:text-mainBlue transition-colors duration-200' size={20} onClick={toggleTheme} />
                             ) : (
-                                <LuMoon className='text-mainBlack cursor-pointer hover:text-mainBlue' size={20} onClick={toggleTheme} />
+                                <LuMoon className='text-mainBlack cursor-pointer hover:text-mainBlue transition-colors duration-200' size={20} onClick={toggleTheme} />
                             )}
                         </div>
                     </div>
