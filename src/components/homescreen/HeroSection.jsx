@@ -29,11 +29,10 @@ const HeroSection = () => {
 
     return (
         <>
-            <div className='top-0 w-full h-[60px] bg-white dark:bg-darkMainBlue/80 z-40' />
-            <div className={`bg-gradient-to-t from-white to-mainBlueLight dark:from-darkMainBlue dark:to-darkMainBlue/60 h-[580px] w-full`}>
+            <div className={`h-[640px] w-full bg-gradient-to-t from-white to-mainBlueLight dark:bg-[radial-gradient(ellipse_at_bottom,_#1e293b,_#0A1222)] z-40`}>
                 <div ref={containerRef} className='flex flex-col items-center justify-center h-full'>
                     <h1
-                        className={`font-semibold text-[5rem] bg-gradient-to-r from-mainBlue/85 to-mainBlueDark bg-clip-text text-transparent ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                        className={`font-semibold text-[5rem] bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                         style={{ animationDelay: '0.1s' }}
                     >
                         Hi, I'm Marshall.
@@ -45,7 +44,10 @@ const HeroSection = () => {
                     </p>
                     <div className={`flex space-x-4 mt-5`}>
                         <button
-                            className={`bg-mainBlue text-white px-[20px] py-3 rounded-md hover:bg-transparent border-[1px] border-mainBlue hover:text-mainBlue dark:hover:text-white dark:hover:border-white transition-colors duration-200 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }}
+                            className={`bg-mainBlue text-white px-[20px] py-3 rounded-md hover:bg-transparent border-[1px] border-mainBlue hover:text-mainBlue dark:hover:text-white dark:hover:border-white transition-colors duration-200 ${
+                                isVisible ? 'fade-in-bottom' : 'opacity-0'
+                            }`}
+                            style={{ animationDelay: '0.5s' }}
                             onClick={() => navigate('/projects')}
                         >
                             <h1 className='flex items-center justify-center'>
@@ -53,7 +55,10 @@ const HeroSection = () => {
                             </h1>
                         </button>
                         <button
-                            className={`bg-transparent px-[35px] text-mainBlue py-3 rounded-md border border-mainBlue dark:border-white dark:text-white hover:bg-mainBlue dark:hover:bg-transparent hover:text-white transition-colors duration-200 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}
+                            className={`bg-transparent px-[35px] text-mainBlue py-3 rounded-md border border-mainBlue dark:border-white dark:text-white hover:bg-mainBlue dark:hover:bg-transparent hover:text-white transition-colors duration-200 ${
+                                isVisible ? 'fade-in-bottom' : 'opacity-0'
+                            }`}
+                            style={{ animationDelay: '0.6s' }}
                             onClick={() => navigate('/contact')}
                         >
                             <h1 className='flex items-center justify-center'>Contact Me</h1>

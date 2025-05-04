@@ -21,7 +21,7 @@ const StatsSection = () => {
                         animateCounts();
                     }
                 },
-                { threshold: 0.4 }
+                { threshold: 0.3 }
             );
 
             if (containerRef.current) observer.observe(containerRef.current);
@@ -49,7 +49,7 @@ const StatsSection = () => {
     };
 
     return (
-        <section ref={containerRef} className='bg-mainBlueLight dark:bg-mainGray/10 h-[180px] w-full flex items-center justify-center'>
+        <section ref={containerRef} className='bg-mainBlueLight dark:bg-darkMainBlueLight h-[180px] w-full flex items-center justify-center'>
             <div className='flex space-x-20'>
                 {stats.map((stat, index) => (
                     <div
@@ -60,7 +60,7 @@ const StatsSection = () => {
                         }}
                     >
                         <h1 className='text-[2.5rem] font-semibold text-mainBlueDark text-center'>{counts[index]}+</h1>
-                        <p className='text-mainGrayDark text-[1.1rem] font-medium text-center'>{stat.label}</p>
+                        <p className='text-mainGrayDark dark:text-white/80 text-[1.1rem] font-medium text-center'>{stat.label}</p>
                     </div>
                 ))}
             </div>

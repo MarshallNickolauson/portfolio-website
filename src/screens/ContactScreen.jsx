@@ -204,11 +204,11 @@ const ContactScreen = () => {
                         <div className='bg-white dark:bg-darkMainBlueLight rounded-md shadow-lg shadow-mainBlack/20 dark:shadow-mainBlue/20 border-[1px] border-mainGray/50 p-4'>
                             <h2 className='text-mainBlack dark:text-white font-semibold text-xl'>Availability</h2>
                             <p className='text-mainGray dark:text-white/80 text-xs mt-1'>
-                                I'm currently available for <strong>small</strong> freelance work and new opportunities. My typical response time is within 24 hours.
+                                I'm potentially available for <strong>small</strong> freelance work and new opportunities. My typical response time is within 24 hours.
                             </p>
                             <div className='flex items-center gap-2 mt-4'>
                                 <FaCircle className='text-green-500' size={8} />
-                                <p className='text-sm text-mainBlack dark:text-white font-medium'>Available for new projects</p>
+                                <p className='text-xs text-mainBlack dark:text-white font-medium'>Available for networking and small projects</p>
                             </div>
                             <div className='flex items-start gap-3 mt-4'>
                                 <FiCalendar className='text-mainBlue mt-1' size={23} />

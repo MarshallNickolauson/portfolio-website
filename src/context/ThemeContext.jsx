@@ -4,7 +4,8 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
     const [darkMode, setDarkMode] = useState(() => {
-        return localStorage.getItem('marshall-nickolauson-theme') === 'dark';
+        const storedTheme = localStorage.getItem('marshall-nickolauson-theme');
+        return storedTheme ? storedTheme === 'dark' : true;
     });
 
     const toggleTheme = () => setDarkMode((prev) => !prev);

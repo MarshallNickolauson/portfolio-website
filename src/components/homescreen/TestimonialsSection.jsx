@@ -54,11 +54,18 @@ const TestimonialsSection = () => {
     }, []);
 
     return (
-        <section className='bg-mainBlueLight dark:bg-white py-6'>
-            <h2 ref={titleRef} className={`text-3xl text-mainBlack font-semibold text-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.1s' }}>
+        <section className='bg-mainBlueLight dark:bg-darkMainBlue py-10'>
+            <h2
+                ref={titleRef}
+                className={`text-3xl text-mainBlack dark:text-white font-semibold text-center ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                style={{ animationDelay: '0.1s' }}
+            >
                 What <span className='text-red-500'>Real</span> People Say
             </h2>
-            <p className={`text-base text-md text-mainGray text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
+            <p
+                className={`text-base text-md text-mainGray dark:text-white/60 text-center mt-2 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                style={{ animationDelay: '0.3s' }}
+            >
                 Here's what some people have said so far about my work.
             </p>
 
@@ -66,19 +73,24 @@ const TestimonialsSection = () => {
                 {testimonials.map((testimonial, index) => (
                     <div
                         key={testimonial.id}
-                        className={`bg-white shadow-md rounded-xl border border-[#e0ecff] w-[270px] p-6 flex flex-col space-y-4 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                        className={`bg-white dark:bg-darkMainBlueLight shadow-md rounded-xl border border-mainBlue/20 dark:border-mainBlue/50 w-[270px] p-6 flex flex-col space-y-4 ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                         style={{ animationDelay: `${0.3 + index * 0.2}s` }}
                     >
                         <div className='flex items-center space-x-3'>
-                            <div className='w-10 h-10 bg-gray-300 rounded-full' />
+                            <div className='w-10 h-10 bg-gray-300 dark:bg-white/20 rounded-full' />
                             <div>
-                                <p className='font-semibold text-mainBlack'>{testimonial.name}</p>
-                                <p className='text-sm text-mainGray'>{testimonial.title}</p>
+                                <p className='font-semibold text-mainBlack dark:text-white'>{testimonial.name}</p>
+                                <p className='text-sm text-mainGray dark:text-white/60'>{testimonial.title}</p>
                             </div>
                         </div>
-                        <hr className='border-t border-mainBlueLight' />
-                        <p className='text-sm italic text-mainGrayDark leading-relaxed'>“{testimonial.feedback}”</p>
-                        <a href={testimonial.linkedin} target='_blank' rel='noopener noreferrer' className='text-mainBlue font-semibold text-sm flex items-center space-x-1'>
+                        <hr className='border-t border-mainBlueLight dark:border-white/10' />
+                        <p className='text-sm italic text-mainGrayDark dark:text-white/70 leading-relaxed'>“{testimonial.feedback}”</p>
+                        <a
+                            href={testimonial.linkedin}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className='text-mainBlue font-semibold text-sm flex items-center space-x-1 hover:underline'
+                        >
                             <FaLinkedin /> <span>LinkedIn</span>
                         </a>
                     </div>
