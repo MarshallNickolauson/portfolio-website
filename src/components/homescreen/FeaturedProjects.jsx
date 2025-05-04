@@ -48,7 +48,7 @@ const FeaturedProjects = () => {
             </p>
 
             <div ref={projectsRef} className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 md:px-8 lg:px-12 max-w-[1200px] mx-auto'>
-                {projects.map((project, index) => (
+                {projects.filter((project) => project.featured === true).map((project, index) => (
                     <ProjectCard key={project.id} project={{ ...project, delay: 0.2 + index * 0.3 }}>
                         <div className='flex space-x-2 pt-2'>
                             <a

@@ -32,7 +32,7 @@ const HeroSection = () => {
         <section ref={containerRef} className='pt-[60px] bg-white dark:bg-darkMainBlue'>
             <div className='flex flex-col justify-center pt-8'>
                 <h1
-                    className={`text-4xl font-semibold text-center bg-gradient-to-r from-mainBlue/75 to-mainBlueDark bg-clip-text text-transparent ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                    className={`text-4xl font-semibold text-center bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 >
                     Skills & Expertise
                 </h1>

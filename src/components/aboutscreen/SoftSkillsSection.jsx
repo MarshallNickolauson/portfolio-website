@@ -45,7 +45,7 @@ const SoftSkillsSection = () => {
             </h2>
             <div className={`flex flex-wrap justify-center gap-3 max-w-[1200px] mx-auto ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`} style={{ animationDelay: `0.4s` }}>
                 {softSkills.map((skill, index) => (
-                    <span key={index} className='font-semibold text-mainBlack text-sm bg-mainBlueLight px-4 py-1.5 rounded-full border whitespace-nowrap'>
+                    <span key={index} className='font-semibold text-mainBlack text-sm bg-mainBlueLight dark:bg-white/10 dark:text-white border-mainBlack/30 dark:border-white/20 px-4 py-1.5 rounded-full border whitespace-nowrap'>
                         {skill}
                     </span>
                 ))}

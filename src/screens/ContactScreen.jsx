@@ -15,11 +15,9 @@ const ContactScreen = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-
         const timer = setTimeout(() => {
             window.dispatchEvent(new Event('contact-scroll-reset-done'));
         }, 200);
-
         return () => clearTimeout(timer);
     }, [pathname]);
 
@@ -32,9 +30,8 @@ const ContactScreen = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
         emailjs.sendForm('service_ls9kg08', 'template_zuwzjmg', e.target, 'op65DIYPiM6yeO0HH').then(
-            (result) => {
+            () => {
                 setShowSuccess(true);
                 setName('');
                 setEmail('');
@@ -48,28 +45,60 @@ const ContactScreen = () => {
         );
     };
 
+    const contactItems = [
+        {
+            id: 'email',
+            label: 'Email',
+            value: 'marshnickol101@gmail.com',
+            icon: <MdOutlineMailOutline size={23} className='text-mainBlue' />,
+            onClick: () => window.open('mailto:marshnickol101@gmail.com', '_blank'),
+        },
+        {
+            id: 'linkedin',
+            label: 'LinkedIn',
+            value: 'linkedin.com/in/marshall-nickolauson',
+            icon: <LuLinkedin size={23} className='text-mainBlue' />,
+            onClick: () => window.open('https://www.linkedin.com/in/marshall-nickolauson-3a7b04274/', '_blank'),
+        },
+        {
+            id: 'github',
+            label: 'GitHub',
+            value: 'github.com/MarshallNickolauson',
+            icon: <FiGithub size={23} className='text-mainBlue' />,
+            onClick: () => window.open('https://github.com/MarshallNickolauson', '_blank'),
+        },
+        {
+            id: 'location',
+            label: 'Location',
+            value: 'Reveal Address',
+            icon: <SlLocationPin size={23} className='text-mainBlue' />,
+            onClick: () => window.open('https://i.kym-cdn.com/photos/images/original/002/103/969/840.png', '_blank'),
+        },
+    ];
+
     return (
         <>
             <HeroSection />
 
             <section className='bg-white dark:bg-darkMainBlue pt-6'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center max-w-[800px] mx-auto'>
+
                     {/* Message Form */}
                     <div className='relative bg-white p-4 w-[400px] dark:bg-darkMainBlueLight rounded-md shadow-lg shadow-mainBlack/20 dark:shadow-mainBlue/20 border-[1px] border-mainGray/50 fade-in-right flex flex-col'>
                         <h1 className='text-mainBlack dark:text-white font-semibold text-xl mb-1'>Send a Message</h1>
                         <p className='text-mainGray dark:text-white/80 text-xs'>Fill out the form below and I'll get back to you as soon as possible.</p>
-                        {/* Success & Error Messages */}
+
                         {(showSuccess || showError) && (
                             <div className='absolute top-[80px] left-1/2 -translate-x-1/2 text-xs '>
-                                <p className={`${showSuccess ? 'text-green-500' : 'text-red-600'} text-center`}>{showSuccess ? 'Message sent successfully!' : `Error sending message.`}</p>
+                                <p className={`${showSuccess ? 'text-green-500' : 'text-red-600'} text-center`}>
+                                    {showSuccess ? 'Message sent successfully!' : 'Error sending message.'}
+                                </p>
                             </div>
                         )}
+
                         <form className='flex flex-col mt-4 space-y-3 flex-1' onSubmit={sendEmail}>
-                            {/* Name */}
                             <div className='flex flex-col'>
-                                <label htmlFor='name' className='text-mainBlack dark:text-white font-medium text-sm pb-1'>
-                                    Name
-                                </label>
+                                <label htmlFor='name' className='text-mainBlack dark:text-white font-medium text-sm pb-1'>Name</label>
                                 <input
                                     id='name'
                                     name='name'
@@ -82,11 +111,8 @@ const ContactScreen = () => {
                                 />
                             </div>
 
-                            {/* Email */}
                             <div className='flex flex-col'>
-                                <label htmlFor='email' className='text-mainBlack dark:text-white font-medium text-sm pb-1'>
-                                    Email
-                                </label>
+                                <label htmlFor='email' className='text-mainBlack dark:text-white font-medium text-sm pb-1'>Email</label>
                                 <input
                                     id='email'
                                     name='email'
@@ -99,11 +125,8 @@ const ContactScreen = () => {
                                 />
                             </div>
 
-                            {/* Subject */}
                             <div className='flex flex-col'>
-                                <label htmlFor='subject' className='text-mainBlack dark:text-white font-medium text-sm pb-1'>
-                                    Subject
-                                </label>
+                                <label htmlFor='subject' className='text-mainBlack dark:text-white font-medium text-sm pb-1'>Subject</label>
                                 <input
                                     id='subject'
                                     name='subject'
@@ -116,11 +139,8 @@ const ContactScreen = () => {
                                 />
                             </div>
 
-                            {/* Message */}
                             <div className='flex flex-col flex-1'>
-                                <label htmlFor='message' className='text-mainBlack dark:text-white font-medium text-sm pb-1'>
-                                    Message
-                                </label>
+                                <label htmlFor='message' className='text-mainBlack dark:text-white font-medium text-sm pb-1'>Message</label>
                                 <textarea
                                     id='message'
                                     name='message'
@@ -132,75 +152,38 @@ const ContactScreen = () => {
                                 />
                             </div>
 
-                            {/* Submit Button */}
                             <button type='submit' className='bg-mainBlue text-white rounded-md px-4 py-2 mt-2 hover:bg-mainBlue/80 transition-colors duration-200 text-sm font-medium'>
                                 Send Message
                             </button>
                         </form>
                     </div>
 
+                    {/* Contact Info & Availability */}
                     <div className='flex flex-col gap-3 w-[400px] fade-in-left'>
-                        {/* Contact Information Box */}
+
+                        {/* Contact Info - Dynamic */}
                         <div className='bg-white dark:bg-darkMainBlueLight rounded-md shadow-lg shadow-mainBlack/20 dark:shadow-mainBlue/20 border-[1px] border-mainGray/50 p-4'>
                             <h2 className='text-mainBlack dark:text-white font-semibold text-xl'>Contact Information</h2>
                             <p className='text-mainGray dark:text-white/80 text-xs mt-1'>Feel free to reach out through any of these channels.</p>
                             <div className='flex flex-col mt-4 space-y-4'>
-                                {/* Email */}
-                                <div>
-                                    <div className='flex items-center gap-2'>
-                                        <MdOutlineMailOutline size={23} className='text-mainBlue' />
-                                        <h1 className='text-mainBlack dark:text-white text-md'>Email</h1>
+                                {contactItems.map(({ id, label, value, icon, onClick }) => (
+                                    <div key={id}>
+                                        <div className='flex items-center gap-2'>
+                                            {icon}
+                                            <h1 className='text-mainBlack dark:text-white text-md'>{label}</h1>
+                                        </div>
+                                        <h1
+                                            className='text-mainGray inline dark:text-white/80 text-xs mt-1 cursor-pointer hover:text-mainBlue dark:hover:text-mainBlue transition duration-200 pl-[31px]'
+                                            onClick={onClick}
+                                        >
+                                            {value}
+                                        </h1>
                                     </div>
-                                    <h1
-                                        className='text-mainGray inline dark:text-white/80 text-xs mt-1 cursor-pointer hover:text-mainBlue transition duration-200 pl-[31px]'
-                                        onClick={() => window.open('mailto:marshnickol101@gmail.com', '_blank')}
-                                    >
-                                        marshnickol101@gmail.com
-                                    </h1>
-                                </div>
-                                {/* LinkedIn */}
-                                <div>
-                                    <div className='flex items-center gap-2'>
-                                        <LuLinkedin size={23} className='text-mainBlue' />
-                                        <h1 className='text-mainBlack inline dark:text-white text-md'>LinkedIn</h1>
-                                    </div>
-                                    <h1
-                                        className='text-mainGray dark:text-white/80 text-xs mt-1 cursor-pointer hover:text-mainBlue transition duration-200 pl-[31px]'
-                                        onClick={() => window.open('https://www.linkedin.com/in/marshall-nickolauson-3a7b04274/', '_blank')}
-                                    >
-                                        linkedin.com/in/marshall-nickolauson
-                                    </h1>
-                                </div>
-                                {/* GitHub */}
-                                <div>
-                                    <div className='flex items-center gap-2'>
-                                        <FiGithub size={23} className='text-mainBlue' />
-                                        <h1 className='text-mainBlack inline dark:text-white text-md'>GitHub</h1>
-                                    </div>
-                                    <h1
-                                        className='text-mainGray dark:text-white/80 text-xs mt-1 cursor-pointer hover:text-mainBlue transition duration-200 pl-[31px]'
-                                        onClick={() => window.open('https://github.com/MarshallNickolauson', '_blank')}
-                                    >
-                                        github.com/MarshallNickolauson
-                                    </h1>
-                                </div>
-                                {/* Location */}
-                                <div>
-                                    <div className='flex items-center gap-2'>
-                                        <SlLocationPin size={23} className='text-mainBlue' />
-                                        <h1 className='text-mainBlack inline dark:text-white text-md'>Location</h1>
-                                    </div>
-                                    <h1
-                                        className='text-mainGray dark:text-white/80 text-xs mt-1 cursor-pointer hover:text-mainBlue transition duration-200 pl-[31px]'
-                                        onClick={() => window.open('https://i.kym-cdn.com/photos/images/original/002/103/969/840.png', '_blank')}
-                                    >
-                                        Reveal Address
-                                    </h1>
-                                </div>
+                                ))}
                             </div>
                         </div>
 
-                        {/* Availability Box */}
+                        {/* Availability */}
                         <div className='bg-white dark:bg-darkMainBlueLight rounded-md shadow-lg shadow-mainBlack/20 dark:shadow-mainBlue/20 border-[1px] border-mainGray/50 p-4'>
                             <h2 className='text-mainBlack dark:text-white font-semibold text-xl'>Availability</h2>
                             <p className='text-mainGray dark:text-white/80 text-xs mt-1'>

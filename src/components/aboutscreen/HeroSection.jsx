@@ -32,7 +32,7 @@ const HeroSection = () => {
         <section ref={containerRef} className='pt-[60px] bg-white dark:bg-darkMainBlue h-[670px] w-full/'>
             <div className='flex justify-center pt-8'>
                 <h1
-                    className={`text-4xl font-semibold bg-gradient-to-r from-mainBlue/80 to-mainBlueDark bg-clip-text text-transparent ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                    className={`text-4xl font-semibold bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 >
                     About Me
                 </h1>
@@ -45,9 +45,9 @@ const HeroSection = () => {
                     <h1 className='text-2xl font-semibold text-mainBlack dark:text-white'>
                         Hello, I'm <span className='text-mainBlue'>Marshall.</span>
                     </h1>
-                    <div className='flex flex-col text-md space-y-4 text-mainGray dark:text-white'>
+                    <div className='flex flex-col text-md space-y-4 text-mainGray dark:text-gray-100'>
                         <p>
-                            My full name is Marshall David Nickolauson, and I’m a passionate Full Stack Developer with a love for problem-solving and creating elegant, efficient, and user-friendly web
+                            My full name is Marshall David Nickolauson, and I’m a passionate Full Stack Developer with a love for problem-solving and making elegant, efficient, and user-friendly web
                             applications.
                         </p>
                         <p>
