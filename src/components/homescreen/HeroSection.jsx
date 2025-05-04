@@ -55,7 +55,7 @@ const HeroSection = () => {
                             </h1>
                         </button>
                         <button
-                            className={`bg-transparent px-[35px] text-mainBlue py-3 rounded-md border border-mainBlue dark:border-white dark:text-white hover:bg-mainBlue dark:hover:bg-transparent hover:text-white transition-colors duration-200 ${
+                            className={`bg-transparent px-[35px] text-mainBlue py-3 rounded-md border border-mainBlue dark:border-white dark:text-white hover:bg-mainBlue dark:hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition-colors duration-200 ${
                                 isVisible ? 'fade-in-bottom' : 'opacity-0'
                             }`}
                             style={{ animationDelay: '0.6s' }}
