@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import projects from '../../projects';
 import ProjectCard from '../ProjectCard';
+import ProjectModal from '../ProjectModal';
 
 const ProjectsSection = () => {
     const [activeButton, setActiveButton] = useState('All Projects');
+    const [selectedProject, setSelectedProject] = useState(null);
     const projectTypes = ['All Projects', 'Fullstack', 'Frontend', 'Backend'];
 
     return (
@@ -36,13 +38,25 @@ const ProjectsSection = () => {
                                     key={project.id}
                                     project={{ ...project, delay: 0.05 + i * 0.1 }}
                                 >
-                                    {/* Optional: custom child (e.g. button/link) */}
-                                    <span className='text-mainBlue text-sm underline cursor-pointer'>View Project Details</span>
+                                    <span
+                                        className='text-mainBlue text-sm underline cursor-pointer'
+                                        onClick={() => setSelectedProject(project)}
+                                    >
+                                        View Project Details
+                                    </span>
                                 </ProjectCard>
                             ))}
                     </div>
                 </div>
             </div>
+
+            {/* Modal */}
+            {selectedProject && (
+                <ProjectModal
+                    project={selectedProject}
+                    onClose={() => setSelectedProject(null)}
+                />
+            )}
         </section>
     );
 };
