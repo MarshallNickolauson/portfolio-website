@@ -100,7 +100,7 @@ const SkillsSection = () => {
                     className='text-mainBlue dark:text-white border border-mainBlue dark:border-white px-6 py-3 rounded-md text-base font-medium hover:bg-mainBlue dark:hover:border-mainBlue hover:text-white transition flex items-center'
                     onClick={() => navigate('/skills')}
                 >
-                    Explore Skills <FaArrowRight className='ml-2' />
+                    Explore All Skills <FaArrowRight className='ml-2' />
                 </button>
             </div>
         </section>

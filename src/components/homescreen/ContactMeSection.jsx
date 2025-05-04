@@ -47,7 +47,7 @@ const ContactMeSection = () => {
 
             <p
                 ref={paragraphRef}
-                className={`text-mainGray dark:text-white/60 text-base max-w-xl mx-auto mt-4 leading-relaxed ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
+                className={`text-mainGray dark:text-white/80 text-base max-w-xl mx-auto mt-4 leading-relaxed ${isVisible ? 'fade-in-bottom' : 'opacity-0'}`}
                 style={{ animationDelay: '0.3s' }}
             >
                 I'm a big fan of good conversations, cool projects, and curious people.

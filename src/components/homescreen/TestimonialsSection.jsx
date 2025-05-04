@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
+import viestarts from '../../assets/img/viestarts.png';
 
 const TestimonialsSection = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -10,6 +11,7 @@ const TestimonialsSection = () => {
             id: 1,
             name: 'Viestarts Vidins',
             title: 'CEO at LinguaCore',
+            img: viestarts,
             feedback:
                 'Impressive work on leveraging AI-powered translations in your project, Marshall. Implementing Docker and NGINX for containerization and security are crucial skills in our evolving tech landscape. Keep pushing the boundaries with these innovative approaches!',
             linkedin: '#',
@@ -18,6 +20,7 @@ const TestimonialsSection = () => {
             id: 2,
             name: 'Viestarts Vidins',
             title: 'CEO at LinguaCore',
+            img: viestarts,
             feedback:
                 'Impressive work on leveraging AI-powered translations in your project, Marshall. Implementing Docker and NGINX for containerization and security are crucial skills in our evolving tech landscape. Keep pushing the boundaries with these innovative approaches!',
             linkedin: '#',
@@ -26,6 +29,7 @@ const TestimonialsSection = () => {
             id: 3,
             name: 'Viestarts Vidins',
             title: 'CEO at LinguaCore',
+            img: viestarts,
             feedback:
                 'Impressive work on leveraging AI-powered translations in your project, Marshall. Implementing Docker and NGINX for containerization and security are crucial skills in our evolving tech landscape. Keep pushing the boundaries with these innovative approaches!',
             linkedin: '#',
@@ -77,7 +81,7 @@ const TestimonialsSection = () => {
                         style={{ animationDelay: `${0.3 + index * 0.2}s` }}
                     >
                         <div className='flex items-center space-x-3'>
-                            <div className='w-10 h-10 bg-gray-300 dark:bg-white/20 rounded-full' />
+                            <img className='w-10 h-10 rounded-full border-[1px] border-mainBlue/50 shadow-sm dark:shadow-mainBlue object-cover' src={testimonial.img} alt="Pic" />
                             <div>
                                 <p className='font-semibold text-mainBlack dark:text-white'>{testimonial.name}</p>
                                 <p className='text-sm text-mainGray dark:text-white/60'>{testimonial.title}</p>

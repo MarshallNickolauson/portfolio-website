@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`fixed w-full z-50 py-4 backdrop-blur-2xl border-b-[1px] border-mainBlue/10 dark:border-mainBlack/50 bg-white/60 dark:bg-black/30 transition-colors duration-300`}>
+            <nav className={`fixed w-full z-50 py-4 backdrop-blur-2xl border-b-[1px] border-mainBlue/10 dark:border-mainBlack/50 bg-white/60 dark:bg-black/30`}>
                 <div className='flex justify-between items-center px-4 max-w-[1200px] mx-auto'>
                     <Link to='/' className='text-mainBlue font-semibold text-lg animate-fade-in'>
                         Marshall Nickolauson

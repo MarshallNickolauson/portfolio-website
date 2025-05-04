@@ -30,7 +30,7 @@ const MovingSkillsSection = () => {
             <div ref={containerRef} className='relative w-full'>
                 <div className='marquee-track'>
                     {repeatedSkills.map((skill, index) => (
-                        <span key={index} className='font-bold text-mainBlue text-sm bg-mainBlueLight px-5 py-2 mx-2 rounded-full border-[1px] border-mainBlue'>
+                        <span key={index} className='font-bold text-mainBlue text-sm bg-mainBlueLight px-5 py-2 mx-2 rounded-full border-[1px] border-mainBlue dark:bg-white/10 dark:text-white dark:border-white/40'>
                             {skill}
                         </span>
                     ))}

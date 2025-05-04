@@ -39,7 +39,7 @@ const HeroSection = () => {
             </div>
             <div className='flex items-center pt-[50px] max-w-[1200px] mx-auto px-4'>
                 <div className={`w-1/3 flex justify-center ${isVisible ? 'fade-in-right' : 'opacity-0'}`}>
-                    <img src={pfp} alt='Marshall Nickolauson PFP' className='w-[250px] h-full rounded-full border-[3px] border-mainBlue/50 shadow-md object-cover' />
+                    <img src={pfp} alt='Marshall Nickolauson PFP' className='w-[250px] h-full rounded-full border-[1px] border-mainBlue/50 shadow-sm dark:shadow-mainBlue object-cover' />
                 </div>
                 <div className={`w-2/3 flex flex-col items-start justify-center pl-[50px] space-y-4 ${isVisible ? 'fade-in-left' : 'opacity-0'}`}>
                     <h1 className='text-2xl font-semibold text-mainBlack dark:text-white'>
