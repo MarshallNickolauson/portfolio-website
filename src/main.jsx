@@ -22,7 +22,6 @@ const router = createBrowserRouter(
             <Route path='*' element={<NotFoundScreen />} />
         </Route>
     ),
-    { basename: '/portfolio-website' }
 );
 
 createRoot(document.getElementById('root')).render(
